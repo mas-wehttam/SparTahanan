@@ -1,90 +1,91 @@
-
-// SAVED
 const SAVED_KEY = 'saved';
 const COMPARE_KEY = 'compare';
 
-
-
 function loadList(key) {
-  return JSON.parse(localStorage.getItem(key)) || [];
+  try {
+    const list = JSON.parse(localStorage.getItem(key));
+    return Array.isArray(list) ? list.filter(id => typeof id === 'string') : [];
+  } catch {
+    return [];
+  }
 }
-
 
 function saveList(key, list) {
-  localStorage.setItem(key, JSON.stringify(list));
+  try {
+    localStorage.setItem(key, JSON.stringify(list));
+    return true;
+  } catch {
+    return false;
+  }
 }
-
 
 function updateSavedCount() {
-  const badge = document.querySelector('.saved-count');
   const count = loadList(SAVED_KEY).length;
-  badge.textContent = count;
-  badge.hidden = count === 0;
+  document.querySelectorAll('.saved-count').forEach(badge => {
+    badge.textContent = count;
+    badge.hidden = count === 0;
+  });
 }
 
-
-// Listing cards
-const cards = document.querySelectorAll('.listing-card');
-
-cards.forEach(function (card) {
-  const id = card.id;
+function bindListingCard(card, onChange = () => {}) {
+  const { id } = card;
   const saveButton = card.querySelector('.save-btn');
   const compareBox = card.querySelector('.compare-checkbox');
   const message = card.querySelector('.card-message');
 
- 
-  if (loadList(SAVED_KEY).includes(id)) {
-    saveButton.classList.add('saved');
+  function updateSaveButton(saved) {
+    saveButton.classList.toggle('saved', saved);
+    saveButton.setAttribute('aria-pressed', saved);
+    saveButton.setAttribute('aria-label', saved ? 'Remove saved property' : 'Save property');
   }
+
+  updateSaveButton(loadList(SAVED_KEY).includes(id));
   compareBox.checked = loadList(COMPARE_KEY).includes(id);
 
-  // Heart button
-  saveButton.addEventListener('click', function () {
+  saveButton.addEventListener('click', () => {
     const saved = loadList(SAVED_KEY);
-
-    if (saved.includes(id)) {
-      saved.splice(saved.indexOf(id), 1); // remove
-    } else {
-      saved.push(id); // add
+    const shouldSave = !saved.includes(id);
+    const next = shouldSave ? [...saved, id] : saved.filter(item => item !== id);
+    if (!saveList(SAVED_KEY, next)) {
+      message.textContent = 'Could not update saved properties in this browser.';
+      return;
     }
-
-    saveButton.classList.toggle('saved');
-    saveList(SAVED_KEY, saved);
+    updateSaveButton(shouldSave);
+    message.textContent = '';
     updateSavedCount();
+    onChange(SAVED_KEY, id);
   });
 
-
-  // Compare checkbox
-  compareBox.addEventListener('change', function () {
+  compareBox.addEventListener('change', () => {
     const selected = loadList(COMPARE_KEY);
-
-    if (compareBox.checked && selected.length === 3) {
+    const wasSelected = selected.includes(id);
+    if (compareBox.checked && !wasSelected && selected.length >= 3) {
       compareBox.checked = false;
-      message.textContent = 'You can compare up to 3 properties. Remove one before adding another.';
+      message.textContent = 'Choose up to three properties to compare.';
       return;
     }
 
-    if (compareBox.checked) {
-      selected.push(id);
-      message.textContent = 'Added to comparison (' + selected.length + ' of 3). View it on Find Accommodation.';
-    } else {
-      selected.splice(selected.indexOf(id), 1);
-      message.textContent = 'Removed from comparison.';
+    const next = compareBox.checked ? [...new Set([...selected, id])] : selected.filter(item => item !== id);
+    if (!saveList(COMPARE_KEY, next)) {
+      compareBox.checked = wasSelected;
+      message.textContent = 'Could not update the comparison in this browser.';
+      return;
     }
-
-    saveList(COMPARE_KEY, selected);
+    message.textContent = compareBox.checked
+      ? 'Added to comparison (' + next.length + ' of 3).'
+      : 'Removed from comparison.';
+    onChange(COMPARE_KEY, id);
   });
-});
+}
 
+document.querySelectorAll('.listing-card').forEach(card => bindListingCard(card));
 updateSavedCount();
 
-
-
-// NavBar
 const header = document.querySelector('.header-overlay');
-
-if (header) {
-  window.addEventListener('scroll', function () {
+if (header && !header.classList.contains('interior-header')) {
+  function updateHeader() {
     header.classList.toggle('scrolled', window.scrollY > 0);
-  });
+  }
+  updateHeader();
+  window.addEventListener('scroll', updateHeader, { passive: true });
 }
