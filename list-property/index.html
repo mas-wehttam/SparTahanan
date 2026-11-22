@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>List Your Property | SparTahanan</title>
+
+    <!-- Poppins font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap">
+
+
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="header-overlay interior-header">
+      <nav class="nav container">
+        <ul class="nav-links">
+          <li><a class="nav-link" href="../home/index.html">Home</a></li>
+          <li><a class="nav-link" href="../accommodations/index.html">Find Accommodation</a></li>
+          <li><a class="nav-link active" aria-current="page" href="index.html">List Your Property</a></li>
+        </ul>
+
+        <a class="brand" href="../home/index.html">
+          <img class="brand-logo" src="../assets/logo/logo-white.png" alt="SparTahanan home">
+        </a>
+
+        <ul class="nav-links nav-links-right">
+          <li><a class="nav-link" href="../about/index.html">About</a></li>
+          <li><a class="nav-link" href="../about/index.html#contact">Contact</a></li>
+          <li><a class="btn btn-outline-light" href="../accommodations/index.html?view=saved">Saved <span class="saved-count" hidden></span></a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="page-intro section-tint">
+        <div class="container">
+          <p class="breadcrumb"><a href="../home/index.html">Home</a> / List Your Property</p>
+          <p class="small-header">For property owners</p>
+          <h1>List Your Property on SparTahanan</h1>
+          <p class="section-text">Help BatStateU students discover your dormitory or boarding house. Add your rental details, show the space, and review your listing.</p>
+          <p class="meta required-note">Fields marked * are required.</p>
+        </div>
+      </section>
+      <form class="container submission-form" id="listing-form">
+        <section class="form-section" aria-labelledby="form-section-0">
+          <div><h2 id="form-section-0">Owner information</h2><p class="meta">Tell students who to contact about this accommodation.</p></div>
+          <div class="field-grid">
+            <label class="field-label">Full name *<input name="owner" autocomplete="name" required></label>
+            <label class="field-label">Email address *<input type="email" name="email" autocomplete="email" required></label>
+            <label class="field-label">Contact number *<input type="tel" name="phone" autocomplete="tel" required></label>
+            <label class="field-label">Preferred contact method *
+              <select name="contact" required>
+                <option value="">Choose a method</option>
+                <option>SMS</option>
+                <option>Phone call</option>
+                <option>Email</option>
+              </select>
+            </label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-1">
+          <div><h2 id="form-section-1">Property information</h2><p class="meta">Introduce your space and choose the BatStateU campus it serves.</p></div>
+          <div class="field-grid">
+            <label class="field-label">Property name *<input name="property" required></label>
+            <label class="field-label">Property type *
+              <select name="type" required>
+                <option value="">Choose a property type</option>
+                <option>Dormitory</option>
+                <option>Boarding House</option>
+              </select>
+            </label>
+            <label class="span-all field-label">Property description *<textarea name="description" rows="3" required placeholder="Describe the room, who it suits, and spaces tenants share."></textarea></label>
+            <label class="field-label">Campus served *
+              <select name="campus" required>
+                <option value="">Choose a campus</option>
+                <option value="alangilan">Alangilan</option>
+                <option value="pablo-borbon">Pablo Borbon</option>
+                <option value="lipa">Lipa</option>
+                <option value="arasof-nasugbu">ARASOF-Nasugbu</option>
+                <option value="jplpc-malvar">JPLPC-Malvar</option>
+                <option value="lima">Lima</option>
+                <option value="balayan">Balayan</option>
+                <option value="lemery">Lemery</option>
+                <option value="rosario">Rosario</option>
+                <option value="san-juan">San Juan</option>
+                <option value="mabini">Mabini</option>
+                <option value="lobo">Lobo</option>
+              </select>
+            </label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-2">
+          <div><h2 id="form-section-2">Property location</h2><p class="meta">Add the complete address and a landmark students can use to find it.</p></div>
+          <div class="field-grid">
+            <label class="span-all field-label">Complete address *<input name="address" autocomplete="street-address" required></label>
+            <label class="field-label">Barangay *<input name="barangay" required></label>
+            <label class="field-label">City or municipality *<input name="city" autocomplete="address-level2" required></label>
+            <label class="field-label">Nearby landmark<input name="landmark"></label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-3">
+          <div><h2 id="form-section-3">Rental information</h2><p class="meta">Show what rent covers and what students will pay when they move in.</p></div>
+          <div class="field-grid">
+            <label class="field-label">Monthly rental price (₱) *<input name="rent" type="number" min="1" required></label>
+            <label class="field-label">Price basis *
+              <select name="basis" required>
+                <option value="">Choose a price basis</option>
+                <option value="bedspace">Per bedspace</option>
+                <option value="person">Per person</option>
+                <option value="room">Per room</option>
+              </select>
+            </label>
+            <label class="field-label">Advance payment (₱) *<input name="advance" type="number" min="0" required placeholder="0 if none"></label>
+            <label class="field-label">Security deposit (₱) *<input name="deposit" type="number" min="0" required placeholder="0 if none"></label>
+            <div class="span-all">
+              <div class="field-grid expense-row">
+                <label class="field-label">Water expenses *
+                  <select name="water" required>
+                    <option value="">Included or extra?</option>
+                    <option>Included in rent</option>
+                    <option>Separate charge</option>
+                    <option>Unavailable</option>
+                  </select>
+                </label>
+                <label class="field-label">Water charging details<input name="waterDetails" placeholder="For example, billed by meter"></label>
+              </div>
+              <div class="field-grid expense-row">
+                <label class="field-label">Electricity expenses *
+                  <select name="electricity" required>
+                    <option value="">Included or extra?</option>
+                    <option>Included in rent</option>
+                    <option>Separate charge</option>
+                    <option>Unavailable</option>
+                  </select>
+                </label>
+                <label class="field-label">Electricity charging details<input name="electricityDetails" placeholder="For example, billed by meter"></label>
+              </div>
+              <div class="field-grid expense-row">
+                <label class="field-label">Internet expenses *
+                  <select name="internet" required>
+                    <option value="">Included or extra?</option>
+                    <option>Included in rent</option>
+                    <option>Separate charge</option>
+                    <option>Unavailable</option>
+                  </select>
+                </label>
+                <label class="field-label">Internet charging details<input name="internetDetails" placeholder="For example, billed by meter"></label>
+              </div>
+            </div>
+            <label class="span-all field-label">Other charges<textarea name="charges" rows="2" placeholder="Add any optional or shared expenses."></textarea></label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-4">
+          <div><h2 id="form-section-4">Room &amp; occupancy</h2><p class="meta">Enter counts for the room being advertised. Available spaces are calculated from capacity and current occupancy.</p></div>
+          <div class="field-grid">
+            <label class="field-label">Room arrangement *
+              <select name="room" required>
+                <option value="">Choose an arrangement</option>
+                <option>Private room</option>
+                <option>Double occupancy</option>
+                <option>Shared room</option>
+                <option>Bedspace</option>
+              </select>
+            </label>
+            <label class="field-label">Maximum room capacity *<input id="capacity" name="capacity" type="number" min="1" required></label>
+            <label class="field-label">Current occupants *<input id="occupied" name="occupied" type="number" min="0" required></label>
+            <label class="field-label">Available spaces<output id="spaces-left" for="capacity occupied">—</output></label>
+            <label class="field-label">Gender policy *
+              <select name="gender" required>
+                <option value="">Choose a policy</option>
+                <option>Female only</option>
+                <option>Male only</option>
+                <option>Co-ed</option>
+              </select>
+            </label>
+            <label class="field-label">Bathroom arrangement *
+              <select name="bathroom" required>
+                <option value="">Choose an arrangement</option>
+                <option>Private</option>
+                <option>Shared</option>
+              </select>
+            </label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-5">
+          <div><h2 id="form-section-5">Amenities &amp; facilities</h2><p class="meta">Select the facilities currently available to tenants.</p></div>
+          <div class="field-grid">
+            <div class="span-all amenity-checks">
+              <label class="check-line"><input type="checkbox" name="amenity" value="Wi-Fi"> Wi-Fi</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Air conditioning"> Air conditioning</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Laundry area"> Laundry area</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Kitchen"> Kitchen</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Study area"> Study area</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Bike parking"> Bike parking</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Private bathroom"> Private bathroom</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Shared bathroom"> Shared bathroom</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Water included"> Water included</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Lockers"> Lockers</label>
+              <label class="check-line"><input type="checkbox" name="amenity" value="Covered drying area"> Covered drying area</label>
+            </div>
+            <label class="span-all field-label">Other facilities<input name="facilities" placeholder="For example, a water dispenser or a covered patio"></label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-6">
+          <div><h2 id="form-section-6">House rules</h2><p class="meta">Set expectations for shared spaces, visitors, pets, and quiet hours.</p></div>
+          <div class="field-grid">
+            <label class="field-label">Curfew *<input name="curfew" required placeholder="Enter a time or specify if there is none"></label>
+            <label class="field-label">Visitor policy *<input name="visitors" required></label>
+            <label class="field-label">Cooking policy *<input name="cooking" required></label>
+            <label class="field-label">Laundry rules *<input name="laundry" required></label>
+            <label class="field-label">Pet policy *
+              <select name="pets" required>
+                <option value="">Choose a policy</option>
+                <option>Allowed</option>
+                <option>With approval</option>
+                <option>Not allowed</option>
+              </select>
+            </label>
+            <label class="field-label">Other restrictions<input name="restrictions"></label>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-7">
+          <div><h2 id="form-section-7">Property photos</h2><p class="meta">Show the room and shared spaces with clear, well-lit images.</p></div>
+          <div class="field-grid">
+            <div class="span-all">
+              <div class="photo-drop" id="photo-drop">
+                <div><strong>Drag photos here or browse files</strong><p class="meta">Up to 10 JPG, PNG, or WebP images, 5 MB each.</p></div>
+                <input type="file" name="photos" id="photo-input" accept="image/jpeg,image/png,image/webp" multiple hidden>
+                <button class="btn btn-soft" id="choose-photos" type="button">Browse files</button>
+              </div>
+              <p class="sample-note" id="photo-message" role="status"></p>
+              <div class="upload-gallery" id="upload-gallery"></div>
+            </div>
+          </div>
+        </section>
+        <section class="form-section" aria-labelledby="form-section-8">
+          <div><h2 id="form-section-8">Review &amp; submission</h2><p class="meta">Check the rent, move-in cost, room information, and contact details before saving.</p></div>
+          <div class="field-grid">
+            <div id="property-preview" class="span-all review-box">
+              <div><h3 data-preview="property"></h3><p data-preview="scope"></p>
+                <p class="meta" data-preview="location"></p><p class="meta" data-preview="room"></p>
+                <p class="meta" data-preview="owner"></p><p class="meta" data-preview="photos"></p></div>
+              <div class="preview-cost"><p class="rent-amount" data-preview="rent"></p><p class="meta" data-preview="basis"></p>
+                <p data-preview="move-in"></p><p class="meta">First month + advance + deposit</p></div>
+            </div>
+            <label class="span-all check-line"><input name="confirmed" type="checkbox" required> I confirm that these details are accurate and I have permission to use the photos. *</label>
+            <p class="span-all meta">This demo saves property submissions in this browser.</p>
+            <div class="span-all form-actions"><button class="btn btn-red" type="submit">Submit Property</button></div>
+            <p class="span-all form-status" id="property-status" role="status"></p>
+          </div>
+        </section>
+      </form>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <p class="footer-name">SparTahanan</p>
+          <p class="footer-tagline">Find your space. Feel at home.</p>
+          <p class="footer-text">A student accommodation guide to dormitories and boarding houses near BatStateU.</p>
+          <p class="footer-text footer-disclaimer">For the Red Spartan community. Not an official BatStateU service.</p>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../accommodations/index.html">Find Accommodation</a></li>
+            <li><a href="index.html">List Your Property</a></li>
+            <li><a href="../about/index.html">About SparTahanan</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Helpful information</h2>
+          <ul class="footer-links">
+            <li><a href="../about/index.html#how-it-works">How it works</a></li>
+            <li><a href="../about/index.html#faq">Frequently asked questions</a></li>
+            <li><a href="../about/index.html#contact">Contact &amp; feedback</a></li>
+            <li><a href="../about/index.html#report">Report a listing</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="footer-heading">Stay informed</h2>
+          <ul class="footer-links">
+            <li><a href="../about/index.html#privacy">Privacy policy</a></li>
+            <li><a href="../about/index.html#terms">Terms of use</a></li>
+            <li><a href="../about/index.html#listing-guidelines">Listing guidelines</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="footer-bottom">
+          <p>© 2026 SparTahanan. All rights reserved.</p>
+          <p>Browse thoughtfully. Visit first. Confirm details with the owner.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
