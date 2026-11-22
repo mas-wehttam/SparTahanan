@@ -1,15 +1,10 @@
+// Campus names and sample listings
 const campuses = {
   alangilan: 'Alangilan', 'pablo-borbon': 'Pablo Borbon', lipa: 'Lipa',
   'arasof-nasugbu': 'ARASOF-Nasugbu', 'jplpc-malvar': 'JPLPC-Malvar',
   lima: 'Lima', balayan: 'Balayan', lemery: 'Lemery', rosario: 'Rosario',
   'san-juan': 'San Juan', mabini: 'Mabini', lobo: 'Lobo'
 };
-
-const amenities = ['Wi-Fi', 'Air conditioning', 'Laundry area', 'Kitchen', 'Study area', 'Bike parking', 'Private bathroom', 'Shared bathroom', 'Water included', 'Lockers', 'Covered drying area'];
-const roomTypes = ['Private room', 'Double occupancy', 'Shared room', 'Bedspace'];
-const propertyTypes = ['Dormitory', 'Boarding House'];
-const genderPolicies = ['Female only', 'Male only', 'Co-ed'];
-const availabilityOptions = ['Available', 'Limited slots', 'Fully occupied', 'Availability unconfirmed'];
 
 const properties = [
   {
@@ -85,21 +80,3 @@ const properties = [
     location: 'Sample location near the Balintawak market route', photo: 'study-nook'
   }
 ];
-
-const pesos = new Intl.NumberFormat('en-PH', {
-  style: 'currency', currency: 'PHP', maximumFractionDigits: 0
-});
-const money = amount => pesos.format(amount);
-const campusName = campus => 'BatStateU ' + campuses[campus];
-const roomPhoto = property => 'assets/properties/' + property.photo + '.jpg';
-
-function slotLabel(property) {
-  if (property.slots === null) return 'Ask the owner about availability';
-  if (property.slots === 0) return 'No open slots';
-  if (property.basis === 'room') return property.slots === 1 ? '1 room available' : property.slots + ' rooms available';
-  return property.slots === 1 ? '1 slot available' : property.slots + ' slots available';
-}
-
-function addOptions(select, options) {
-  for (const [value, label] of options) select.add(new Option(label, value));
-}
