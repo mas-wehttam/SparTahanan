@@ -1,21 +1,4 @@
-// Saved and compared properties are shared across pages through browser storage.
-function loadPropertyIds(key) {
-  try {
-    const ids = JSON.parse(localStorage.getItem(key));
-    const propertyIds = [];
-    if (Array.isArray(ids)) {
-      for (const id of ids) {
-        if (typeof id === 'string') {
-          propertyIds.push(id);
-        }
-      }
-    }
-    return propertyIds;
-  } catch {
-    return [];
-  }
-}
-
+// Update saved and compared properties in browser storage.
 function savePropertyIds(key, ids) {
   try {
     localStorage.setItem(key, JSON.stringify(ids));
@@ -23,13 +6,6 @@ function savePropertyIds(key, ids) {
   } catch {
     return false;
   }
-}
-
-function updateSavedCount() {
-  const count = loadPropertyIds('saved').length;
-  const badge = document.querySelector('.saved-count');
-  badge.textContent = count;
-  badge.hidden = count === 0;
 }
 
 function updateSaveButton(button, isSaved) {
@@ -122,10 +98,6 @@ const filterNames = ['type', 'arrangement', 'gender', 'status'];
 const pageParams = new URLSearchParams(window.location.search);
 const criteria = { campus: '', area: '', maxBudget: '', saved: pageParams.get('view') === 'saved' };
 let appliedFilters = new FormData(filtersForm);
-
-function money(amount) {
-  return '₱' + amount.toLocaleString('en-PH', { maximumFractionDigits: 0 });
-}
 
 function campusName(campus) {
   return 'BatStateU ' + campuses[campus];
@@ -604,4 +576,3 @@ const linkedProperty = findProperty(pageParams.get('property'));
 if (linkedProperty) {
   openProperty(linkedProperty);
 }
-
