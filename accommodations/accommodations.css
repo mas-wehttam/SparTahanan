@@ -1,0 +1,546 @@
+
+/* BUTTONS */
+
+.btn-small {
+  padding: 10px 18px;
+}
+
+/* Pink kapag naka-on Saved only */
+.btn-soft.active {
+  border-color: var(--red);
+  background: var(--blush);
+  color: var(--red);
+}
+
+/* Reset all */
+.text-button {
+  color: var(--red);
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+
+/* SEARCH BAR */
+
+/* 3 dropdown, 1 button */
+.search-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 0.55fr;
+  gap: 12px;
+  align-items: end;
+  margin-top: 27px;
+  padding: 16px;
+  background: var(--white);
+}
+
+
+/* FILTERS */
+
+/* Filters left, listings right */
+.directory-layout {
+  display: grid;
+  grid-template-columns: 235px 1fr;
+  gap: 44px;
+  padding-top: 38px;
+  padding-bottom: 68px;
+}
+
+/* May line sa kanan ng filters */
+.filters-panel {
+  padding-right: 20px;
+  border-right: 1px solid var(--line);
+}
+
+/* Filters heading left,  Reset all right */
+.filters-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filters-heading h2 {
+  font-size: 22px;
+}
+
+/* Every filter, may line sa ilalim */
+.filter-group {
+  margin: 19px 0;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+
+.filter-title {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.filters-button {
+  width: 100%;
+}
+
+
+/* LISTINGS */
+
+/* Count left, sort right */
+.directory-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.directory-toolbar h2 {
+  font-size: 22px;
+}
+
+/* Lapad ng Sort by */
+.directory-toolbar .field-label {
+  width: 220px;
+}
+
+/* Saved only at Compare, nasa kanan */
+.directory-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 16px 0 8px;
+}
+
+/* Flex para gumana yung sort */
+.listing-results {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Isang listing: photo, detalye, presyo */
+.directory-card {
+  display: grid;
+  grid-template-columns: 26% 1fr 24%;
+  gap: 18px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+/* relative para makapatong ang heart dito */
+.directory-photo {
+  position: relative;
+  background: var(--off-white);
+}
+
+/* Pinupuno ng photo ang buong box */
+.property-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Mga detalye sa gitna */
+.directory-card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Presyo sa kanan */
+.directory-rent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Label kung may bakante */
+.status-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  background: var(--off-white);
+  color: var(--red);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Pink kapag konti na lang */
+.status-badge.limited {
+  background: var(--blush);
+}
+
+/* Gray kapag puno na */
+.status-badge.full {
+  color: var(--gray);
+}
+
+/* Pangalan ng listing, pwedeng i-click */
+.card-title {
+  margin: 9px 0 3px;
+  font-size: 19px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Red at may underline kapag tinapat ang mouse */
+.card-title:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+/* Gaano kalayo sa campus */
+.distance-line {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Klase ng room */
+.room-line {
+  font-size: 14px;
+}
+
+/* Ilan pa ang bakante */
+.slot-line {
+  font-size: 14px;
+  color: var(--red);
+}
+
+/* Checkbox at salitang Compare */
+.compare {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Red kapag naka-check */
+.compare-checkbox {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--red);
+}
+
+/* Message sa Compare. Nakatago muna */
+.card-message {
+  font-size: 14px;
+  color: var(--gray);
+}
+
+/* Tinutulak ang button sa baba */
+.directory-rent .btn {
+  margin-top: auto;
+}
+
+/* Paalala sa ilalim ng listings */
+.results-foot {
+  margin-top: 22px;
+}
+
+/* Lalabas kapag walang listing */
+.empty-state {
+  padding: 32px;
+  background: var(--off-white);
+}
+
+.empty-state p {
+  margin: 8px 0 18px;
+}
+
+/* Tinatago kapag nilagay ng JS ang class na "hidden" */
+.directory-card.hidden,
+.hidden {
+  display: none;
+}
+
+
+/* HEART BUTTON - Pang-save ng listing */
+
+/* absolute = nakapatong sa photo, sa taas na kanan */
+.save-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 2px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+/* Pink kapag tinapat ang mouse */
+.save-btn:hover {
+  background: var(--blush);
+}
+
+/* Laki ng heart */
+.heart-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+/* Nakatago muna ang red na heart */
+.heart-filled {
+  display: none;
+}
+
+/* Kapag saved na, itago ang outline na heart */
+.save-btn.saved .heart-outline {
+  display: none;
+}
+
+/* at ipakita ang red na heart */
+.save-btn.saved .heart-filled {
+  display: block;
+}
+
+
+/* POPUP - Yung lumalabas na window sa gitna ng screen */
+
+/* Dark layer sa buong screen. Nakatago muna */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background: rgba(37, 37, 39, 0.66);
+}
+
+/* Lalabas sa gitna kapag may class na "open" (galing sa JS) */
+.popup.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* White na box. auto = may sariling scroll kapag mahaba */
+.popup-box {
+  width: 1060px;
+  max-height: 90%;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--white);
+  box-shadow: 0 18px 75px rgba(21, 17, 18, 0.28);
+}
+
+/* Title ng popup, naiiwan sa taas kahit mag-scroll */
+.popup-heading {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.popup-heading h2 {
+  font-size: 32px;
+}
+
+.popup-heading .meta {
+  margin-top: 4px;
+}
+
+/* Yung X na button */
+.popup-close {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: var(--white);
+  color: var(--charcoal);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Pink kapag tinapat ang mouse */
+.popup-close:hover {
+  background: var(--blush);
+}
+
+
+/* PROPERTY DETAILS - Laman ng popup kapag na-click ang View Details */
+
+/* Photos sa kaliwa, presyo sa kanan */
+.property-detail-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 28px;
+  padding: 20px 24px 28px;
+}
+
+/* Malaking photo */
+.gallery-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Maliliit na photo, lima sa isang row */
+.gallery-thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin: 10px 0 18px;
+}
+
+/* Bawat maliit na photo */
+.gallery-thumb {
+  padding: 3px;
+  border: 1px solid var(--line);
+  background: var(--white);
+  color: var(--gray);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* Red border sa photo na pinili */
+.gallery-thumb.active {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.gallery-thumb img {
+  display: block;
+  width: 100%;
+  margin-bottom: 3px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* Box ng presyo */
+.detail-rent {
+  padding: 16px 18px;
+  background: var(--off-white);
+}
+
+.detail-rent .small-header {
+  margin-bottom: 2px;
+}
+
+.detail-rent .status-badge {
+  margin-top: 5px;
+  background: var(--white);
+}
+
+/* Dalawang column ng detalye */
+.detail-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+  margin-top: 18px;
+}
+
+/* Label (halimbawa: Gender policy) */
+.detail-name {
+  font-size: 13px;
+  color: var(--gray);
+}
+
+/* Sagot (halimbawa: Female only) */
+.detail-value {
+  font-size: 14px;
+}
+
+/* Bawat part, may line sa taas */
+.detail-section {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.detail-section h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.detail-section p {
+  font-size: 14px;
+}
+
+.detail-section .detail-name {
+  font-size: 13px;
+}
+
+/* Space sa pagitan ng mga gastos */
+.detail-expense {
+  margin-bottom: 8px;
+}
+
+/* Dalawang column ng amenities */
+.amenity-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 7px 14px;
+  font-size: 14px;
+}
+
+/* Red na check */
+.check {
+  margin-right: 7px;
+  color: var(--red);
+}
+
+/* Buong lapad ang button */
+.contact-button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* Contact ng owner. Nakatago muna */
+.contact-details {
+  display: none;
+  margin-top: 8px;
+}
+
+/* Lalabas kapag na-click ang Contact Owner */
+.contact-details.open {
+  display: block;
+}
+
+
+/* COMPARE TABLE - Table na pinagkukumpara ang mga listing */
+
+/* Space sa paligid ng table */
+.comparison {
+  padding: 16px 24px 24px;
+}
+
+/* collapse = walang space sa pagitan ng cells */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Spacing at line ng bawat cell */
+.comparison-table th,
+.comparison-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Unang row (mga pangalan) */
+.comparison-names {
+  background: var(--off-white);
+}
