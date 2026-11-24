@@ -1,0 +1,106 @@
+
+/* LIST YOUR PROPERTY */
+
+.required-note {
+  margin-top: 15px;
+}
+
+.submission-form {
+  padding-bottom: 60px;
+}
+
+/* Title left, fields right */
+.form-section {
+  display: grid;
+  grid-template-columns: 0.38fr 1fr;
+  gap: 48px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-section h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.expenses {
+  display: grid;
+  gap: 5px;
+}
+
+/* Off-white na box */
+.expense-row {
+  padding: 10px 14px;
+  background: var(--off-white);
+}
+
+/* 3 column ng checkbox */
+.amenity-checks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px 12px;
+}
+
+
+/* PHOTOS */
+
+/* Box na may Browse button */
+.photo-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--off-white);
+}
+
+/* Hidden, yung Browse button ang maopen nito */
+.photo-input {
+  display: none;
+}
+
+/* 5 photo row */
+.upload-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0 12px;
+}
+
+.upload-photo {
+  width: 100%;
+  margin-top: 12px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+
+/* REVIEW */
+
+/* Details left, price right */
+.review-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  background: var(--off-white);
+  overflow-wrap: anywhere;
+}
+
+.review-box h3 {
+  margin-bottom: 5px;
+}
+
+.preview-cost {
+  text-align: right;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 16px;
+}

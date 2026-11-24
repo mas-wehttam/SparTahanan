@@ -42,7 +42,7 @@ a {
 }
 
 
-/* Centers the page content and adds space on the sides */
+/* Centers page content and adds space on the sides */
 .container {
   max-width: 1440px;
   margin: 0 auto;
@@ -109,7 +109,6 @@ a {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .btn-small {
@@ -225,7 +224,7 @@ a {
 
 /* Saved */
 .saved-count {
-  display: inline-block;
+  display: none;
   min-width: 22px;
   margin-left: 4px;
   padding: 3px 6px;
@@ -233,14 +232,13 @@ a {
   background: var(--off-white);
   color: var(--charcoal);
   font-size: 12px;
-  font-weight: 600;
   line-height: 1;
   text-align: center;
 }
 
-/* Hidden when nothing is saved */
-.saved-count[hidden] {
-  display: none;
+/* Shown when something is saved */
+.saved-count.show {
+  display: inline-block;
 }
 
 
@@ -302,9 +300,7 @@ a {
 
 .footer-bottom {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  gap: 8px 32px;
   margin-top: 48px;
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
@@ -332,14 +328,14 @@ a {
   background: var(--line);
 }
 
-.photo-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Room photo */
+.room-photo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.5;
+  object-fit: cover;
 }
 
 /* Heart button */
@@ -453,13 +449,14 @@ a {
 
 /* Compare message */
 .card-message {
+  display: none;
   margin-top: 8px;
   font-size: 14px;
   color: var(--gray);
 }
 
-.card-message:empty {
-  display: none;
+.card-message.show {
+  display: block;
 }
 
 
@@ -789,19 +786,13 @@ a {
 }
 
 /* Line to the next step */
-.step::after {
-  content: "";
+.step-line {
   position: absolute;
   top: 22px;
   left: 60px;
   right: -32px;
   height: 1px;
   background: rgba(255, 255, 255, 0.35);
-}
-
-/* No line on the last step */
-.step:last-child::after {
-  display: none;
 }
 
 /* Step circle */

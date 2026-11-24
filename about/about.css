@@ -1,0 +1,179 @@
+
+/* ABOUT INTRO */
+
+/* Text left, photo right */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: center;
+  gap: 56px;
+}
+
+/* 3 / 2 shape photo */
+.about-photo {
+  width: 100%;
+  margin-top: 14px;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Red na link */
+.about-link {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--red);
+  text-decoration: none;
+}
+
+/* May underline kapag hover mouse */
+.about-link:hover {
+  text-decoration: underline;
+}
+
+
+/* SECTIONS */
+
+/* Space each section */
+.about-section {
+  padding: 64px 0;
+  scroll-margin-top: 80px; /* taas ng navbar */
+}
+
+/* Off-white na background */
+.section-tint {
+  background: var(--off-white);
+}
+
+/* Title ng section */
+.about-section h2 {
+  font-size: 40px;
+  letter-spacing: -1.4px;
+}
+
+/* Heading left, content content right*/
+.about-split {
+  display: grid;
+  grid-template-columns: 0.38fr 1fr;
+  gap: 48px;
+}
+
+
+/* BENEFITS */
+
+/* One row, name left, details right */
+.benefit {
+  display: grid;
+  grid-template-columns: 0.65fr 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.benefit-name {
+  font-weight: 600;
+}
+
+.benefit-text {
+  color: var(--gray);
+}
+
+
+/* HOW IT WORKS - Yung tatlong steps */
+
+/* Students at owners na magkatabi */
+.about-paths {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+  margin-top: 25px;
+}
+
+/* Pababa yung direction  */
+.about-path {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Numbers 1, 2, 3 */
+.about-path ol {
+  margin: 14px 0 15px 21px;
+  list-style: decimal;
+}
+
+/* Red number */
+.about-path li {
+  margin-bottom: 9px;
+  font-weight: 600;
+  color: var(--red);
+}
+
+/* Dark ulit text */
+.about-path li span {
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+.about-path .btn {
+  margin-top: auto;
+}
+
+
+/* QUESTIONS */
+
+/* scroll-margin = hindi natatakpan ng navbar */
+.faq {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 100px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  border: 0;
+  background: none;
+  color: var(--charcoal);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+/* Plus  minus */
+.faq-sign {
+  color: var(--red);
+}
+
+/* Hidden muna */
+.faq-answer {
+  display: none;
+  margin-top: 7px;
+  color: var(--gray);
+}
+
+/* Off-white kapag nakabukas */
+.faq.open {
+  background: var(--off-white);
+}
+
+.faq.open .faq-answer {
+  display: block;
+}
+
+.feedback {
+  margin-top: 22px;
+}
+
+
+/* FORMS */
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
