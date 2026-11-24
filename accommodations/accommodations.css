@@ -95,12 +95,11 @@
   font-size: 22px;
 }
 
-/* Lapad ng Sort by */
 .directory-toolbar .field-label {
   width: 220px;
 }
 
-/* Saved only at Compare, nasa kanan */
+/* Saved only at Compare, right */
 .directory-actions {
   display: flex;
   justify-content: flex-end;
@@ -108,13 +107,12 @@
   margin: 16px 0 8px;
 }
 
-/* Flex para gumana yung sort */
 .listing-results {
   display: flex;
   flex-direction: column;
 }
 
-/* Isang listing: photo, detalye, presyo */
+/* 1 listing: photo, detalye, presyo */
 .directory-card {
   display: grid;
   grid-template-columns: 26% 1fr 24%;
@@ -123,13 +121,12 @@
   border-bottom: 1px solid var(--line);
 }
 
-/* relative para makapatong ang heart dito */
+/* relative para makapatong heart dito */
 .directory-photo {
   position: relative;
   background: var(--off-white);
 }
 
-/* Pinupuno ng photo ang buong box */
 .property-photo {
   position: absolute;
   top: 0;
@@ -140,14 +137,14 @@
   cursor: pointer;
 }
 
-/* Mga detalye sa gitna */
+/* Mga details sa gitna */
 .directory-card-main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-/* Presyo sa kanan */
+/* price rent */
 .directory-rent {
   display: flex;
   flex-direction: column;
@@ -182,31 +179,30 @@
   cursor: pointer;
 }
 
-/* Red at may underline kapag tinapat ang mouse */
+/* Red and may underline kapag hover mouse */
 .card-title:hover {
   color: var(--red);
   text-decoration: underline;
 }
 
-/* Gaano kalayo sa campus */
+
 .distance-line {
   margin: 5px 0;
   font-size: 14px;
   font-weight: 600;
 }
 
-/* Klase ng room */
+
 .room-line {
   font-size: 14px;
 }
 
-/* Ilan pa ang bakante */
 .slot-line {
   font-size: 14px;
   color: var(--red);
 }
 
-/* Checkbox at salitang Compare */
+/* Checkbox and Compare */
 .compare {
   display: flex;
   align-items: center;
@@ -223,18 +219,17 @@
   accent-color: var(--red);
 }
 
-/* Message sa Compare. Nakatago muna */
+/* Message sa Compare */
 .card-message {
   font-size: 14px;
   color: var(--gray);
 }
 
-/* Tinutulak ang button sa baba */
+
 .directory-rent .btn {
   margin-top: auto;
 }
 
-/* Paalala sa ilalim ng listings */
 .results-foot {
   margin-top: 22px;
 }
@@ -249,15 +244,16 @@
   margin: 8px 0 18px;
 }
 
+/* Hidden directory */
 .directory-card.hidden,
 .hidden {
   display: none;
 }
 
 
-/* HEART BUTTON - Pang-save ng listing */
+/* HEART BUTTON */
 
-/* absolute = nakapatong sa photo, sa taas na kanan */
+/* absolute = nakapatong sa photo, sa taas right */
 .save-btn {
   position: absolute;
   top: 8px;
@@ -278,7 +274,7 @@
   background: var(--blush);
 }
 
-/* Laki ng heart */
+/* size ng heart */
 .heart-icon {
   display: block;
   width: 20px;
@@ -290,20 +286,20 @@
   display: none;
 }
 
-/* Kapag saved na, itago ang outline na heart */
+/* Kapag saved na, itago outline heart */
 .save-btn.saved .heart-outline {
   display: none;
 }
 
-/* at ipakita ang red na heart */
+/* show red heart */
 .save-btn.saved .heart-filled {
   display: block;
 }
 
 
-/* POPUP - Yung lumalabas na window sa gitna ng screen */
+/* POPUP */
 
-/* Dark layer sa buong screen. Nakatago muna */
+/* Dark layer sa buong screen. Hidden muna */
 .popup {
   display: none;
   position: fixed;
@@ -367,15 +363,15 @@
   cursor: pointer;
 }
 
-/* Pink kapag tinapat ang mouse */
+/* Pink kapag hover mouse */
 .popup-close:hover {
   background: var(--blush);
 }
 
 
-/* PROPERTY DETAILS - Laman ng popup kapag na-click ang View Details */
+/* PROPERTY DETAILS */
 
-/* Photos sa kaliwa, presyo sa kanan */
+/* Photos left, price right */
 .property-detail-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
@@ -391,7 +387,7 @@
   object-fit: cover;
 }
 
-/* Maliliit na photo, lima sa isang row */
+/* Maliliit na photo, 5 sa isang row */
 .gallery-thumbs {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -399,7 +395,7 @@
   margin: 10px 0 18px;
 }
 
-/* Bawat maliit na photo */
+/* Maliit na photo */
 .gallery-thumb {
   padding: 3px;
   border: 1px solid var(--line);
@@ -410,7 +406,7 @@
   cursor: pointer;
 }
 
-/* Red border sa photo na pinili */
+/* Red border sa photo chosen */
 .gallery-thumb.active {
   border-color: var(--red);
   color: var(--red);
@@ -424,7 +420,7 @@
   object-fit: cover;
 }
 
-/* Box ng presyo */
+/* Box ng price */
 .detail-rent {
   padding: 16px 18px;
   background: var(--off-white);
@@ -447,13 +443,13 @@
   margin-top: 18px;
 }
 
-/* Label (halimbawa: Gender policy) */
+/* Label (ex. Gender policy) */
 .detail-name {
   font-size: 13px;
   color: var(--gray);
 }
 
-/* Sagot (halimbawa: Female only) */
+/* Sagot (ex. Female only) */
 .detail-value {
   font-size: 14px;
 }
@@ -478,12 +474,11 @@
   font-size: 13px;
 }
 
-/* Space sa pagitan ng mga gastos */
 .detail-expense {
   margin-bottom: 8px;
 }
 
-/* Dalawang column ng amenities */
+/* 2 column ng amenities */
 .amenity-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -497,13 +492,12 @@
   color: var(--red);
 }
 
-/* Buong lapad ang button */
 .contact-button {
   width: 100%;
   margin-top: 12px;
 }
 
-/* Contact ng owner. Nakatago muna */
+/* Contact owner. Hidden muna */
 .contact-details {
   display: none;
   margin-top: 8px;
@@ -515,21 +509,21 @@
 }
 
 
-/* COMPARE TABLE - Table na pinagkukumpara ang mga listing */
+/* COMPARE TABLE */
 
-/* Space sa paligid ng table */
+/* Space paligid table */
 .comparison {
   padding: 16px 24px 24px;
 }
 
-/* collapse = walang space sa pagitan ng cells */
+/* collapse = walang space pagitan ng cells */
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
   font-size: 14px;
 }
 
-/* Spacing at line ng bawat cell */
+/* Spacing at line bawat cell */
 .comparison-table th,
 .comparison-table td {
   padding: 12px;
@@ -538,7 +532,7 @@
   vertical-align: top;
 }
 
-/* Unang row (mga pangalan) */
+/* First row (names) */
 .comparison-names {
   background: var(--off-white);
 }
