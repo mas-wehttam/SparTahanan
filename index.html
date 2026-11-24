@@ -12,16 +12,6 @@
 
   
   <link rel="stylesheet" href="styles.css">
-  <style>
-    .sample-room-photo {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  </style>
 </head>
 <body>
   <!-- HEADER / NAVIGATION -->
@@ -29,18 +19,18 @@
     <nav class="nav container">
       <ul class="nav-links">
         <li><a class="nav-link active" href="index.html">Home</a></li>
-        <li><a class="nav-link" href="accommodations.html">Find Accommodation</a></li>
-        <li><a class="nav-link" href="list-property.html">List Your Property</a></li>
+        <li><a class="nav-link" href="accommodations/accommodations.html">Find Accommodation</a></li>
+        <li><a class="nav-link" href="list-property/list-property.html">List Your Property</a></li>
       </ul>
 
-      <a class="brand" href="index.html">
+      <a href="index.html">
         <img class="brand-logo" src="assets/logo/logo-white.png" alt="SparTahanan home">
       </a>
 
       <ul class="nav-links nav-links-right">
-        <li><a class="nav-link" href="about.html">About</a></li>
-        <li><a class="nav-link" href="about.html#contact">Contact</a></li>
-        <li><a class="btn btn-outline-light" href="accommodations.html?view=saved">Saved <span class="saved-count" hidden></span></a></li>
+        <li><a class="nav-link" href="about/about.html">About</a></li>
+        <li><a class="nav-link" href="about/about.html#contact">Contact</a></li>
+        <li><a class="btn btn-outline-light" href="accommodations/accommodations.html?view=saved">Saved <span class="saved-count"></span></a></li>
       </ul>
     </nav>
   </header>
@@ -48,7 +38,7 @@
 
 
 
-  <main id="main">
+  <main>
     <!-- HERO -->
     <section class="hero">
       <video class="hero-video" src="assets/hero-background.mp4" autoplay muted loop playsinline></video>
@@ -62,17 +52,17 @@
         <p class="hero-text">Find dormitories and boarding houses near BatStateU. Compare your options. Make room for student life.</p>
 
         <div class="hero-buttons">
-          <a class="btn btn-large btn-hero btn-hero-red" href="accommodations.html">FIND ACCOMODATION <span>→</span></a>
-          <a class="btn btn-large btn-hero btn-outline-light" href="about.html">ABOUT US</a>
+          <a class="btn btn-large btn-hero btn-hero-red" href="accommodations/accommodations.html">FIND ACCOMODATION <span>→</span></a>
+          <a class="btn btn-large btn-hero btn-outline-light" href="about/about.html">ABOUT US</a>
         </div>
 
         <p class="hero-popular">
           <span class="hero-popular-label">Popular:</span>
-          <a href="accommodations.html?campus=alangilan">Alangilan</a>
+          <a href="accommodations/accommodations.html?campus=alangilan">Alangilan</a>
           <span class="dot">·</span>
-          <a href="accommodations.html?campus=pablo-borbon">Pablo Borbon</a>
+          <a href="accommodations/accommodations.html?campus=pablo-borbon">Pablo Borbon</a>
           <span class="dot">·</span>
-          <a href="accommodations.html?maxBudget=3000">Under ₱3,000 / month</a>
+          <a href="accommodations/accommodations.html?maxBudget=3000">Under ₱3,000 / month</a>
         </p>
 
         <p class="hero-values">
@@ -96,14 +86,14 @@
             <h2 class="section-title">Find your fit, near your campus.</h2>
             <p class="section-text">A few student-friendly spaces to help you picture the possibilities.</p>
           </div>
-          <a class="link-red" href="accommodations.html">View all accommodations →</a>
+          <a class="link-red" href="accommodations/accommodations.html">View all accommodations →</a>
         </div>
 
         <div class="card-grid">
           <!-- Card 1 -->
           <div class="listing-card" id="spartan-study-residence">
             <div class="card-photo">
-              <img class="sample-room-photo" src="assets/properties/spartan.jpg" alt="Illustrative room for Spartan Study Residence">
+              <img class="room-photo" src="assets/properties/spartan.jpg" alt="Room at Spartan Study Residence">
               <button class="save-btn" type="button">
                 <img class="heart-icon heart-outline" src="assets/icons/heart.svg" alt="Save">
                 <img class="heart-icon heart-filled" src="assets/icons/heart-filled.svg" alt="Saved">
@@ -124,7 +114,7 @@
               <label class="compare">
                 <input class="compare-checkbox" type="checkbox"> Compare
               </label>
-              <a class="btn btn-red btn-small" href="accommodations.html?property=spartan-study-residence">View Details →</a>
+              <a class="btn btn-red btn-small" href="accommodations/accommodations.html?property=spartan-study-residence">View Details →</a>
             </div>
             <p class="card-message"></p>
           </div>
@@ -133,7 +123,7 @@
           <!-- Card 2 -->
           <div class="listing-card" id="casa-maharlika-boarding-house">
             <div class="card-photo">
-              <img class="sample-room-photo" src="assets/properties/maharlika.jpg" alt="Illustrative room for Casa Maharlika Boarding House">
+              <img class="room-photo" src="assets/properties/maharlika.jpg" alt="Room at Casa Maharlika Boarding House">
               <button class="save-btn" type="button">
                 <img class="heart-icon heart-outline" src="assets/icons/heart.svg" alt="Save">
                 <img class="heart-icon heart-filled" src="assets/icons/heart-filled.svg" alt="Saved">
@@ -152,7 +142,7 @@
               <label class="compare">
                 <input class="compare-checkbox" type="checkbox"> Compare
               </label>
-              <a class="btn btn-red btn-small" href="accommodations.html?property=casa-maharlika-boarding-house">View Details →</a>
+              <a class="btn btn-red btn-small" href="accommodations/accommodations.html?property=casa-maharlika-boarding-house">View Details →</a>
             </div>
             <p class="card-message"></p>
           </div>
@@ -162,7 +152,7 @@
           <!-- Card 3 -->
           <div class="listing-card" id="the-study-nook-dormitory">
             <div class="card-photo">
-              <img class="sample-room-photo" src="assets/properties/study-nook.jpg" alt="Illustrative room for The Study Nook Dormitory">
+              <img class="room-photo" src="assets/properties/study-nook.jpg" alt="Room at The Study Nook Dormitory">
               <button class="save-btn" type="button">
                 <img class="heart-icon heart-outline" src="assets/icons/heart.svg" alt="Save">
                 <img class="heart-icon heart-filled" src="assets/icons/heart-filled.svg" alt="Saved">
@@ -183,7 +173,7 @@
               <label class="compare">
                 <input class="compare-checkbox" type="checkbox"> Compare
               </label>
-              <a class="btn btn-red btn-small" href="accommodations.html?property=the-study-nook-dormitory">View Details →</a>
+              <a class="btn btn-red btn-small" href="accommodations/accommodations.html?property=the-study-nook-dormitory">View Details →</a>
             </div>
             <p class="card-message"></p>
           </div>
@@ -215,19 +205,19 @@
         </div>
 
         <div class="featured-campuses">
-          <a class="featured-campus" href="accommodations.html?campus=pablo-borbon">
+          <a class="featured-campus" href="accommodations/accommodations.html?campus=pablo-borbon">
             <img class="featured-campus-photo" src="assets/campus/bsu-pablo-borbon.jpg" alt="">
             <span class="featured-campus-body">
-              <span class="featured-campus-name">Pablo Borbon <span class="count-pill">24 listings</span></span>
+              <span class="featured-campus-name">Pablo Borbon <span class="count-pill">2 listings</span></span>
               <span class="featured-campus-area">Kumintang Ibaba &amp; nearby areas</span>
               <span class="featured-campus-link">Explore accommodations →</span>
             </span>
           </a>
 
-          <a class="featured-campus" href="accommodations.html?campus=alangilan">
+          <a class="featured-campus" href="accommodations/accommodations.html?campus=alangilan">
             <img class="featured-campus-photo" src="assets/campus/bsu-alangilan.jpg" alt="">
             <span class="featured-campus-body">
-              <span class="featured-campus-name">Alangilan <span class="count-pill">31 listings</span></span>
+              <span class="featured-campus-name">Alangilan <span class="count-pill">4 listings</span></span>
               <span class="featured-campus-area">Alangilan &amp; nearby barangays</span>
               <span class="featured-campus-link">Explore accommodations →</span>
             </span>
@@ -243,94 +233,94 @@
         </div>
 
         <div class="campus-grid">
-          <a class="campus-card" href="accommodations.html?campus=lipa">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=lipa">
             <img class="campus-thumb" src="assets/campus/bsu-lipa.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Lipa City</span>
               <span class="campus-name">Lipa</span>
             </span>
-            <span class="campus-count">18 listings →</span>
+            <span class="campus-count">1 listing →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=arasof-nasugbu">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=arasof-nasugbu">
             <img class="campus-thumb" src="assets/campus/bsu-nasugbu.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Nasugbu</span>
               <span class="campus-name">ARASOF-Nasugbu</span>
             </span>
-            <span class="campus-count">12 listings →</span>
+            <span class="campus-count">1 listing →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=jplpc-malvar">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=jplpc-malvar">
             <img class="campus-thumb" src="assets/campus/bsu-malvar.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Malvar</span>
               <span class="campus-name">JPLPC-Malvar</span>
             </span>
-            <span class="campus-count">9 listings →</span>
+            <span class="campus-count">1 listing →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=lima">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=lima">
             <img class="campus-thumb" src="assets/campus/bsu-lima.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Lima</span>
               <span class="campus-name">Lima</span>
             </span>
-            <span class="campus-count">7 listings →</span>
+            <span class="campus-count">1 listing →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=balayan">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=balayan">
             <img class="campus-thumb" src="assets/campus/bsu-balayan.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Balayan</span>
               <span class="campus-name">Balayan</span>
             </span>
-            <span class="campus-count">8 listings →</span>
+            <span class="campus-count">No listings yet →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=lemery">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=lemery">
             <img class="campus-thumb" src="assets/campus/bsu-lemery.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Lemery</span>
               <span class="campus-name">Lemery</span>
             </span>
-            <span class="campus-count">6 listings →</span>
+            <span class="campus-count">No listings yet →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=rosario">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=rosario">
             <img class="campus-thumb" src="assets/campus/bsu-rosario.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Rosario</span>
               <span class="campus-name">Rosario</span>
             </span>
-            <span class="campus-count">5 listings →</span>
+            <span class="campus-count">No listings yet →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=san-juan">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=san-juan">
             <img class="campus-thumb" src="assets/campus/bsu-san-juan.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">San Juan</span>
               <span class="campus-name">San Juan</span>
             </span>
-            <span class="campus-count">4 listings →</span>
+            <span class="campus-count">No listings yet →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=mabini">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=mabini">
             <img class="campus-thumb" src="assets/campus/bsu-mabini.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Mabini</span>
               <span class="campus-name">Mabini</span>
             </span>
-            <span class="campus-count">6 listings →</span>
+            <span class="campus-count">No listings yet →</span>
           </a>
 
-          <a class="campus-card" href="accommodations.html?campus=lobo">
+          <a class="campus-card" href="accommodations/accommodations.html?campus=lobo">
             <img class="campus-thumb" src="assets/campus/bsu-lobo.jpg" alt="">
             <span class="campus-info">
               <span class="campus-place">Lobo</span>
               <span class="campus-name">Lobo</span>
             </span>
-            <span class="campus-count">3 listings →</span>
+            <span class="campus-count">No listings yet →</span>
           </a>
         </div>
 
@@ -346,18 +336,20 @@
             <h2 class="how-title">A simpler way to find your space.</h2>
             <p class="how-text">Three steps from choosing your campus to moving in.</p>
           </div>
-          <a class="btn btn-red btn-large" href="accommodations.html">Explore listings</a>
+          <a class="btn btn-red btn-large" href="accommodations/accommodations.html">Explore listings</a>
         </div>
 
       
         <ol class="steps">
           <li class="step">
             <span class="step-number">1</span>
+            <span class="step-line"></span>
             <h3 class="step-title">Start close to campus</h3>
             <p class="step-text">Pick your campus, then narrow by area and monthly budget. Rent and what it covers are shown upfront.</p>
           </li>
           <li class="step">
             <span class="step-number">2</span>
+            <span class="step-line"></span>
             <h3 class="step-title">Compare what matters</h3>
             <p class="step-text">Look at room setups, costs and amenities side by side. Save the places you like to build a shortlist.</p>
           </li>
@@ -380,7 +372,7 @@
             <h2 class="section-title">Have room for a Red Spartan?</h2>
             <p class="owner-cta-text">Describe your space, rates and room details in one clear, student&#8209;friendly listing.</p>
           </div>
-          <a class="btn btn-red btn-large" href="list-property.html">List Your Property</a>
+          <a class="btn btn-red btn-large" href="list-property/list-property.html">List Your Property</a>
         </div>
       </div>
     </section>
@@ -403,28 +395,28 @@
         <h2 class="footer-heading">Explore</h2>
         <ul class="footer-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="accommodations.html">Find Accommodation</a></li>
-          <li><a href="list-property.html">List Your Property</a></li>
-          <li><a href="about.html">About SparTahanan</a></li>
+          <li><a href="accommodations/accommodations.html">Find Accommodation</a></li>
+          <li><a href="list-property/list-property.html">List Your Property</a></li>
+          <li><a href="about/about.html">About SparTahanan</a></li>
         </ul>
       </div>
 
       <div>
         <h2 class="footer-heading">Helpful information</h2>
         <ul class="footer-links">
-          <li><a href="about.html#how-it-works">How it works</a></li>
-          <li><a href="about.html#faq">Frequently asked questions</a></li>
-          <li><a href="about.html#contact">Contact &amp; feedback</a></li>
-          <li><a href="about.html#report">Report a listing</a></li>
+          <li><a href="about/about.html#how-it-works">How it works</a></li>
+          <li><a href="about/about.html#faq">Frequently asked questions</a></li>
+          <li><a href="about/about.html#contact">Contact &amp; feedback</a></li>
+          <li><a href="about/about.html#report">Report a listing</a></li>
         </ul>
       </div>
 
       <div>
         <h2 class="footer-heading">Stay informed</h2>
         <ul class="footer-links">
-          <li><a href="about.html#privacy">Privacy policy</a></li>
-          <li><a href="about.html#terms">Terms of use</a></li>
-          <li><a href="about.html#listing-guidelines">Listing guidelines</a></li>
+          <li><a href="about/about.html#privacy">Privacy policy</a></li>
+          <li><a href="about/about.html#terms">Terms of use</a></li>
+          <li><a href="about/about.html#listing-guidelines">Listing guidelines</a></li>
         </ul>
       </div>
     </div>

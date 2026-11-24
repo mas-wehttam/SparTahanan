@@ -9,32 +9,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap">
 
-
-    <link rel="stylesheet" href="../shared/styles.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../shared/shared.css">
+    <link rel="stylesheet" href="list-property.css">
   </head>
   <body>
-    <header class="header-overlay interior-header">
+    <header class="header">
       <nav class="nav container">
         <ul class="nav-links">
           <li><a class="nav-link" href="../index.html">Home</a></li>
-          <li><a class="nav-link" href="../accommodations/index.html">Find Accommodation</a></li>
-          <li><a class="nav-link active" aria-current="page" href="index.html">List Your Property</a></li>
+          <li><a class="nav-link" href="../accommodations/accommodations.html">Find Accommodation</a></li>
+          <li><a class="nav-link active" href="list-property.html">List Your Property</a></li>
         </ul>
 
-        <a class="brand" href="../index.html">
+        <a href="../index.html">
           <img class="brand-logo" src="../assets/logo/logo-white.png" alt="SparTahanan home">
         </a>
 
         <ul class="nav-links nav-links-right">
-          <li><a class="nav-link" href="../about/index.html">About</a></li>
-          <li><a class="nav-link" href="../about/index.html#contact">Contact</a></li>
-          <li><a class="btn btn-outline-light" href="../accommodations/index.html?view=saved">Saved <span class="saved-count" hidden></span></a></li>
+          <li><a class="nav-link" href="../about/about.html">About</a></li>
+          <li><a class="nav-link" href="../about/about.html#contact">Contact</a></li>
+          <li><a class="btn btn-outline-light" href="../accommodations/accommodations.html?view=saved">Saved <span class="saved-count"></span></a></li>
         </ul>
       </nav>
     </header>
-    <main id="main">
-      <section class="page-intro section-tint">
+    <main>
+      <section class="page-intro">
         <div class="container">
           <p class="breadcrumb"><a href="../index.html">Home</a> / List Your Property</p>
           <p class="small-header">For property owners</p>
@@ -44,8 +43,11 @@
         </div>
       </section>
       <form class="container submission-form" id="listing-form">
-        <section class="form-section" aria-labelledby="form-section-0">
-          <div><h2 id="form-section-0">Owner information</h2><p class="meta">Tell students who to contact about this accommodation.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Owner information</h2>
+            <p class="meta">Tell students who to contact about this accommodation.</p>
+          </div>
           <div class="field-grid">
             <label class="field-label">Full name *<input name="owner" autocomplete="name" required></label>
             <label class="field-label">Email address *<input type="email" name="email" autocomplete="email" required></label>
@@ -60,8 +62,11 @@
             </label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-1">
-          <div><h2 id="form-section-1">Property information</h2><p class="meta">Introduce your space and choose the BatStateU campus it serves.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Property information</h2>
+            <p class="meta">Introduce your space and choose the BatStateU campus it serves.</p>
+          </div>
           <div class="field-grid">
             <label class="field-label">Property name *<input name="property" required></label>
             <label class="field-label">Property type *
@@ -91,8 +96,11 @@
             </label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-2">
-          <div><h2 id="form-section-2">Property location</h2><p class="meta">Add the complete address and a landmark students can use to find it.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Property location</h2>
+            <p class="meta">Add the complete address and a landmark students can use to find it.</p>
+          </div>
           <div class="field-grid">
             <label class="span-all field-label">Complete address *<input name="address" autocomplete="street-address" required></label>
             <label class="field-label">Barangay *<input name="barangay" required></label>
@@ -100,8 +108,11 @@
             <label class="field-label">Nearby landmark<input name="landmark"></label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-3">
-          <div><h2 id="form-section-3">Rental information</h2><p class="meta">Show what rent covers and what students will pay when they move in.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Rental information</h2>
+            <p class="meta">Show what rent covers and what students will pay when they move in.</p>
+          </div>
           <div class="field-grid">
             <label class="field-label">Monthly rental price (₱) *<input name="rent" type="number" min="1" required></label>
             <label class="field-label">Price basis *
@@ -114,7 +125,7 @@
             </label>
             <label class="field-label">Advance payment (₱) *<input name="advance" type="number" min="0" required placeholder="0 if none"></label>
             <label class="field-label">Security deposit (₱) *<input name="deposit" type="number" min="0" required placeholder="0 if none"></label>
-            <div class="span-all">
+            <div class="span-all expenses">
               <div class="field-grid expense-row">
                 <label class="field-label">Water expenses *
                   <select name="water" required>
@@ -152,8 +163,11 @@
             <label class="span-all field-label">Other charges<textarea name="charges" rows="2" placeholder="Add any optional or shared expenses."></textarea></label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-4">
-          <div><h2 id="form-section-4">Room &amp; occupancy</h2><p class="meta">Enter counts for the room being advertised. Available spaces are calculated from capacity and current occupancy.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Room &amp; occupancy</h2>
+            <p class="meta">Enter counts for the room being advertised. Available spaces are calculated from capacity and current occupancy.</p>
+          </div>
           <div class="field-grid">
             <label class="field-label">Room arrangement *
               <select name="room" required>
@@ -164,9 +178,9 @@
                 <option>Bedspace</option>
               </select>
             </label>
-            <label class="field-label">Maximum room capacity *<input id="capacity" name="capacity" type="number" min="1" required></label>
-            <label class="field-label">Current occupants *<input id="occupied" name="occupied" type="number" min="0" required></label>
-            <label class="field-label">Available spaces<output id="spaces-left" for="capacity occupied">—</output></label>
+            <label class="field-label">Maximum room capacity *<input name="capacity" type="number" min="1" required></label>
+            <label class="field-label">Current occupants *<input name="occupied" type="number" min="0" required></label>
+            <label class="field-label">Available spaces<input id="spaces-left" readonly></label>
             <label class="field-label">Gender policy *
               <select name="gender" required>
                 <option value="">Choose a policy</option>
@@ -184,8 +198,11 @@
             </label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-5">
-          <div><h2 id="form-section-5">Amenities &amp; facilities</h2><p class="meta">Select the facilities currently available to tenants.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Amenities &amp; facilities</h2>
+            <p class="meta">Select the facilities currently available to tenants.</p>
+          </div>
           <div class="field-grid">
             <div class="span-all amenity-checks">
               <label class="check-line"><input type="checkbox" name="amenity" value="Wi-Fi"> Wi-Fi</label>
@@ -203,8 +220,11 @@
             <label class="span-all field-label">Other facilities<input name="facilities" placeholder="For example, a water dispenser or a covered patio"></label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-6">
-          <div><h2 id="form-section-6">House rules</h2><p class="meta">Set expectations for shared spaces, visitors, pets, and quiet hours.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>House rules</h2>
+            <p class="meta">Set expectations for shared spaces, visitors, pets, and quiet hours.</p>
+          </div>
           <div class="field-grid">
             <label class="field-label">Curfew *<input name="curfew" required placeholder="Enter a time or specify if there is none"></label>
             <label class="field-label">Visitor policy *<input name="visitors" required></label>
@@ -221,34 +241,48 @@
             <label class="field-label">Other restrictions<input name="restrictions"></label>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-7">
-          <div><h2 id="form-section-7">Property photos</h2><p class="meta">Show the room and shared spaces with clear, well-lit images.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Property photos</h2>
+            <p class="meta">Show the room and shared spaces with clear, well-lit images.</p>
+          </div>
           <div class="field-grid">
             <div class="span-all">
-              <div class="photo-drop" id="photo-drop">
-                <div><strong>Drag photos here or browse files</strong><p class="meta">Up to 10 JPG, PNG, or WebP images, 5 MB each.</p></div>
-                <input type="file" name="photos" id="photo-input" accept="image/jpeg,image/png,image/webp" multiple hidden>
-                <button class="btn btn-soft" id="choose-photos" type="button">Browse files</button>
+              <div class="photo-box">
+                <div>
+                  <strong>Add photos of your property</strong>
+                  <p class="meta">JPG, PNG, or WebP images. You can choose more than one.</p>
+                </div>
+                <input class="photo-input" id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+                <label class="btn btn-soft" for="photo-input">Browse files</label>
               </div>
-              <p class="sample-note" id="photo-message" role="status"></p>
               <div class="upload-gallery" id="upload-gallery"></div>
             </div>
           </div>
         </section>
-        <section class="form-section" aria-labelledby="form-section-8">
-          <div><h2 id="form-section-8">Review &amp; submission</h2><p class="meta">Check the rent, move-in cost, room information, and contact details before saving.</p></div>
+        <section class="form-section">
+          <div>
+            <h2>Review &amp; submission</h2>
+            <p class="meta">Check the name, address, and cost before submitting.</p>
+          </div>
           <div class="field-grid">
-            <div id="property-preview" class="span-all review-box">
-              <div><h3 data-preview="property"></h3><p data-preview="scope"></p>
-                <p class="meta" data-preview="location"></p><p class="meta" data-preview="room"></p>
-                <p class="meta" data-preview="owner"></p><p class="meta" data-preview="photos"></p></div>
-              <div class="preview-cost"><p class="rent-amount" data-preview="rent"></p><p class="meta" data-preview="basis"></p>
-                <p data-preview="move-in"></p><p class="meta">First month + advance + deposit</p></div>
+            <div class="span-all review-box">
+              <div>
+                <h3>Your property</h3>
+                <p id="preview-name"></p>
+                <p class="meta" id="preview-address"></p>
+              </div>
+              <div class="preview-cost">
+                <p class="rent-amount" id="preview-rent"></p>
+                <p id="preview-total"></p>
+                <p class="meta">First month + advance + deposit</p>
+              </div>
             </div>
             <label class="span-all check-line"><input name="confirmed" type="checkbox" required> I confirm that these details are accurate and I have permission to use the photos. *</label>
-            <p class="span-all meta">This demo saves property submissions in this browser.</p>
-            <div class="span-all form-actions"><button class="btn btn-red" type="submit">Submit Property</button></div>
-            <p class="span-all form-status" id="property-status" role="status"></p>
+            <div class="span-all form-actions">
+              <p class="form-status" id="property-status" role="status"></p>
+              <button class="btn btn-red" type="submit">Submit Property</button>
+            </div>
           </div>
         </section>
       </form>
@@ -266,28 +300,28 @@
           <h2 class="footer-heading">Explore</h2>
           <ul class="footer-links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="../accommodations/index.html">Find Accommodation</a></li>
-            <li><a href="index.html">List Your Property</a></li>
-            <li><a href="../about/index.html">About SparTahanan</a></li>
+            <li><a href="../accommodations/accommodations.html">Find Accommodation</a></li>
+            <li><a href="list-property.html">List Your Property</a></li>
+            <li><a href="../about/about.html">About SparTahanan</a></li>
           </ul>
         </div>
 
         <div>
           <h2 class="footer-heading">Helpful information</h2>
           <ul class="footer-links">
-            <li><a href="../about/index.html#how-it-works">How it works</a></li>
-            <li><a href="../about/index.html#faq">Frequently asked questions</a></li>
-            <li><a href="../about/index.html#contact">Contact &amp; feedback</a></li>
-            <li><a href="../about/index.html#report">Report a listing</a></li>
+            <li><a href="../about/about.html#how-it-works">How it works</a></li>
+            <li><a href="../about/about.html#faq">Frequently asked questions</a></li>
+            <li><a href="../about/about.html#contact">Contact &amp; feedback</a></li>
+            <li><a href="../about/about.html#report">Report a listing</a></li>
           </ul>
         </div>
 
         <div>
           <h2 class="footer-heading">Stay informed</h2>
           <ul class="footer-links">
-            <li><a href="../about/index.html#privacy">Privacy policy</a></li>
-            <li><a href="../about/index.html#terms">Terms of use</a></li>
-            <li><a href="../about/index.html#listing-guidelines">Listing guidelines</a></li>
+            <li><a href="../about/about.html#privacy">Privacy policy</a></li>
+            <li><a href="../about/about.html#terms">Terms of use</a></li>
+            <li><a href="../about/about.html#listing-guidelines">Listing guidelines</a></li>
           </ul>
         </div>
       </div>
