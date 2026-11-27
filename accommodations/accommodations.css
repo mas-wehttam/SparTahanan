@@ -5,13 +5,6 @@
   padding: 10px 18px;
 }
 
-/* Pink kapag naka-on Saved only */
-.btn-soft.active {
-  border-color: var(--red);
-  background: var(--blush);
-  color: var(--red);
-}
-
 /* Reset all */
 .text-button {
   color: var(--red);
@@ -99,19 +92,6 @@
   width: 220px;
 }
 
-/* Saved only at Compare, right */
-.directory-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin: 16px 0 8px;
-}
-
-.listing-results {
-  display: flex;
-  flex-direction: column;
-}
-
 /* 1 listing: photo, detalye, presyo */
 .directory-card {
   display: grid;
@@ -119,6 +99,7 @@
   gap: 18px;
   padding: 20px 0;
   border-bottom: 1px solid var(--line);
+  scroll-margin-top: 80px; /* taas ng navbar */
 }
 
 /* relative para makapatong heart dito */
@@ -134,7 +115,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  cursor: pointer;
 }
 
 /* Mga details sa gitna */
@@ -171,18 +151,11 @@
   color: var(--gray);
 }
 
-/* Pangalan ng listing, pwedeng i-click */
+/* Pangalan ng listing */
 .card-title {
   margin: 9px 0 3px;
   font-size: 19px;
   font-weight: 500;
-  cursor: pointer;
-}
-
-/* Red and may underline kapag hover mouse */
-.card-title:hover {
-  color: var(--red);
-  text-decoration: underline;
 }
 
 
@@ -202,29 +175,6 @@
   color: var(--red);
 }
 
-/* Checkbox and Compare */
-.compare {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding-top: 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-/* Red kapag naka-check */
-.compare-checkbox {
-  width: 16px;
-  height: 16px;
-  accent-color: var(--red);
-}
-
-/* Message sa Compare */
-.card-message {
-  font-size: 14px;
-  color: var(--gray);
-}
-
 
 .directory-rent .btn {
   margin-top: auto;
@@ -232,22 +182,6 @@
 
 .results-foot {
   margin-top: 22px;
-}
-
-/* Lalabas kapag walang listing */
-.empty-state {
-  padding: 32px;
-  background: var(--off-white);
-}
-
-.empty-state p {
-  margin: 8px 0 18px;
-}
-
-/* Hidden directory */
-.directory-card.hidden,
-.hidden {
-  display: none;
 }
 
 
@@ -281,21 +215,6 @@
   height: 20px;
 }
 
-/* Nakatago muna ang red na heart */
-.heart-filled {
-  display: none;
-}
-
-/* Kapag saved na, itago outline heart */
-.save-btn.saved .heart-outline {
-  display: none;
-}
-
-/* show red heart */
-.save-btn.saved .heart-filled {
-  display: block;
-}
-
 
 /* POPUP */
 
@@ -311,7 +230,8 @@
   background: rgba(37, 37, 39, 0.66);
 }
 
-.popup.open {
+/* target = lalabas kapag na-click ang link papunta sa id nito */
+.popup:target {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -350,17 +270,18 @@
   margin-top: 4px;
 }
 
-/* Yung X na button */
+/* Yung X na link */
 .popup-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: 40px;
   height: 40px;
   border: 1px solid var(--line);
   border-radius: 2px;
-  background: var(--white);
-  color: var(--charcoal);
   font-size: 24px;
-  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Pink kapag hover mouse */
@@ -399,14 +320,11 @@
 .gallery-thumb {
   padding: 3px;
   border: 1px solid var(--line);
-  background: var(--white);
   color: var(--gray);
   font-size: 12px;
-  text-align: left;
-  cursor: pointer;
 }
 
-/* Red border sa photo chosen */
+/* Red border sa photo na malaki */
 .gallery-thumb.active {
   border-color: var(--red);
   color: var(--red);
@@ -490,49 +408,4 @@
 .check {
   margin-right: 7px;
   color: var(--red);
-}
-
-.contact-button {
-  width: 100%;
-  margin-top: 12px;
-}
-
-/* Contact owner. Hidden muna */
-.contact-details {
-  display: none;
-  margin-top: 8px;
-}
-
-/* Lalabas kapag na-click ang Contact Owner */
-.contact-details.open {
-  display: block;
-}
-
-
-/* COMPARE TABLE */
-
-/* Space paligid table */
-.comparison {
-  padding: 16px 24px 24px;
-}
-
-/* collapse = walang space pagitan ng cells */
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-}
-
-/* Spacing at line bawat cell */
-.comparison-table th,
-.comparison-table td {
-  padding: 12px;
-  border-bottom: 1px solid var(--line);
-  text-align: left;
-  vertical-align: top;
-}
-
-/* First row (names) */
-.comparison-names {
-  background: var(--off-white);
 }

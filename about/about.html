@@ -28,7 +28,7 @@
         <ul class="nav-links nav-links-right">
           <li><a class="nav-link active" href="about.html">About</a></li>
           <li><a class="nav-link" href="about.html#contact">Contact</a></li>
-          <li><a class="btn btn-outline-light" href="../accommodations/accommodations.html?view=saved">Saved <span class="saved-count"></span></a></li>
+          <li><a class="btn btn-outline-light" href="../accommodations/accommodations.html">Saved</a></li>
         </ul>
       </nav>
     </header>
@@ -105,31 +105,31 @@
           <div><p class="small-header">Frequently asked questions</p><h2>Questions, answered.</h2><a href="#contact" class="about-link">Send an inquiry</a></div>
           <div>
             <div class="faq">
-              <button class="faq-question" type="button">What is SparTahanan? <span class="faq-sign">+</span></button>
+              <h3 class="faq-question">What is SparTahanan?</h3>
               <p class="faq-answer">It is a student accommodation directory focused on dormitories and boarding houses near BatStateU.</p>
             </div>
             <div class="faq">
-              <button class="faq-question" type="button">Who can use the directory? <span class="faq-sign">+</span></button>
+              <h3 class="faq-question">Who can use the directory?</h3>
               <p class="faq-answer">Students looking for a room can browse the directory. Dormitory and boarding house owners can use the property form.</p>
             </div>
             <div class="faq">
-              <button class="faq-question" type="button">How do I find accommodations near my campus? <span class="faq-sign">+</span></button>
+              <h3 class="faq-question">How do I find accommodations near my campus?</h3>
               <p class="faq-answer">Choose a campus on Find Accommodation, then narrow your search by area, budget, or distance.</p>
             </div>
             <div class="faq">
-              <button class="faq-question" type="button">Are listed rental prices monthly? <span class="faq-sign">+</span></button>
+              <h3 class="faq-question">Are listed rental prices monthly?</h3>
               <p class="faq-answer">Yes. Check the price basis and any separate charges for utilities, deposits, or services.</p>
             </div>
             <div class="faq">
-              <button class="faq-question" type="button">How do I contact a property owner? <span class="faq-sign">+</span></button>
-              <p class="faq-answer">Open a listing and choose Contact Owner to see its contact details.</p>
+              <h3 class="faq-question">How do I contact a property owner?</h3>
+              <p class="faq-answer">Open a listing and look for its contact details under Property owner.</p>
             </div>
             <div class="faq">
-              <button class="faq-question" type="button">How do property owners submit an accommodation? <span class="faq-sign">+</span></button>
+              <h3 class="faq-question">How do property owners submit an accommodation?</h3>
               <p class="faq-answer">Use List Your Property to enter the rental details, add photos, and review the listing.</p>
             </div>
             <div class="faq">
-              <button class="faq-question" type="button">Are listed properties verified? <span class="faq-sign">+</span></button>
+              <h3 class="faq-question">Are listed properties verified?</h3>
               <p class="faq-answer">SparTahanan does not verify listings. Confirm the terms and the condition of the room directly with the owner before paying.</p>
             </div>
           </div>
@@ -140,15 +140,14 @@
         <div class="container about-split">
           <div><h2>Contact us</h2><p class="section-text">Ask a question about using SparTahanan or share an idea to improve it. Use the report form below for issues with a specific listing.</p>
           </div>
-          <form class="field-grid contact-form">
+          <form class="field-grid">
             <h3 class="span-all">Send an inquiry</h3>
-            <label class="field-label">Full name *<input name="name" autocomplete="name" required></label>
-            <label class="field-label">Email address *<input type="email" name="email" placeholder="you@example.com" autocomplete="email" required></label>
-            <label class="span-all field-label">Subject *<input name="subject" required></label>
-            <label class="span-all field-label">Message *<textarea name="message" required rows="5"></textarea></label>
-            <div class="span-all form-actions">
-              <button class="btn btn-red" type="submit">Submit Inquiry</button>
-              <p class="form-status" role="status"></p>
+            <label class="field-label">Full name *<input autocomplete="name"></label>
+            <label class="field-label">Email address *<input type="email" placeholder="you@example.com" autocomplete="email"></label>
+            <label class="span-all field-label">Subject *<input></label>
+            <label class="span-all field-label">Message *<textarea rows="5"></textarea></label>
+            <div class="span-all">
+              <button class="btn btn-red" type="button">Submit Inquiry</button>
             </div>
           </form>
         </div>
@@ -158,27 +157,21 @@
         <div class="container about-split">
           <div><p class="small-header">Feedback &amp; listing reports</p><h2>Help keep listings up to date.</h2><p class="section-text">Flag outdated prices, unavailable rooms, or details that need correcting.</p></div>
           <div>
-            <form class="field-grid contact-form">
+            <form class="field-grid">
               <h3 class="span-all">Report listing information</h3>
-              <label class="span-all field-label">Listing link or property name *<input name="listing" required placeholder="Paste a link or enter the property name"></label>
-              <label class="span-all field-label">What needs to be corrected? *<textarea name="message" required rows="3"></textarea></label>
-              <div class="span-all form-actions">
-                <button class="btn btn-red" type="submit">Submit Report</button>
-                <p class="form-status" role="status"></p>
+              <label class="span-all field-label">Listing link or property name *<input placeholder="Paste a link or enter the property name"></label>
+              <label class="span-all field-label">What needs to be corrected? *<textarea rows="3"></textarea></label>
+              <div class="span-all">
+                <button class="btn btn-red" type="button">Submit Report</button>
               </div>
             </form>
-            <div class="faq feedback">
-              <button class="faq-question" type="button">Share feedback <span class="faq-sign">+</span></button>
-              <div class="faq-answer">
-                <form class="field-grid contact-form">
-                  <label class="span-all field-label">Your suggestion *<textarea name="message" required rows="3"></textarea></label>
-                  <div class="span-all form-actions">
-                    <button class="btn btn-red" type="submit">Submit Feedback</button>
-                    <p class="form-status" role="status"></p>
-                  </div>
-                </form>
+            <form class="field-grid feedback">
+              <h3 class="span-all">Share feedback</h3>
+              <label class="span-all field-label">Your suggestion *<textarea rows="3"></textarea></label>
+              <div class="span-all">
+                <button class="btn btn-red" type="button">Submit Feedback</button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -186,15 +179,15 @@
       <section class="about-section section-tint">
         <div class="container">
           <div class="faq" id="privacy">
-            <button class="faq-question" type="button">Privacy policy <span class="faq-sign">+</span></button>
-            <p class="faq-answer">Your saved properties and comparisons stay in this browser only. Use your browser’s site data settings to clear them. What you type in the forms is not stored.</p>
+            <h3 class="faq-question">Privacy policy</h3>
+            <p class="faq-answer">SparTahanan does not collect your personal information. What you type in the forms is not stored.</p>
           </div>
           <div class="faq" id="terms">
-            <button class="faq-question" type="button">Terms of use <span class="faq-sign">+</span></button>
+            <h3 class="faq-question">Terms of use</h3>
             <p class="faq-answer">SparTahanan is an independent student accommodation guide. Confirm current rental terms directly with the property owner.</p>
           </div>
           <div class="faq" id="listing-guidelines">
-            <button class="faq-question" type="button">Listing guidelines <span class="faq-sign">+</span></button>
+            <h3 class="faq-question">Listing guidelines</h3>
             <p class="faq-answer">Use accurate prices, plain-language house rules, and current photos you have permission to share. Keep availability and contact details up to date.</p>
           </div>
         </div>

@@ -28,7 +28,7 @@
         <ul class="nav-links nav-links-right">
           <li><a class="nav-link" href="../about/about.html">About</a></li>
           <li><a class="nav-link" href="../about/about.html#contact">Contact</a></li>
-          <li><a class="btn btn-outline-light" href="accommodations.html?view=saved">Saved <span class="saved-count"></span></a></li>
+          <li><a class="btn btn-outline-light" href="accommodations.html">Saved</a></li>
         </ul>
       </nav>
     </header>
@@ -39,47 +39,47 @@
           <p class="small-header">Campus accommodation directory</p>
           <h1>Find Your Place Near Campus</h1>
           <p class="section-text">Explore dormitories and boarding houses near BatStateU. Find a place that fits your budget and student life.</p>
-          <form class="search-bar" autocomplete="off">
+          <form class="search-bar">
             <label class="field-label">Campus
-              <select class="choice" id="campus">
-                <option value="">All campuses</option>
-                <option value="alangilan">Alangilan</option>
-                <option value="pablo-borbon">Pablo Borbon</option>
-                <option value="lipa">Lipa</option>
-                <option value="arasof-nasugbu">ARASOF-Nasugbu</option>
-                <option value="jplpc-malvar">JPLPC-Malvar</option>
-                <option value="lima">Lima</option>
-                <option value="balayan">Balayan</option>
-                <option value="lemery">Lemery</option>
-                <option value="rosario">Rosario</option>
-                <option value="san-juan">San Juan</option>
-                <option value="mabini">Mabini</option>
-                <option value="lobo">Lobo</option>
+              <select>
+                <option>All campuses</option>
+                <option>Alangilan</option>
+                <option>Pablo Borbon</option>
+                <option>Lipa</option>
+                <option>ARASOF-Nasugbu</option>
+                <option>JPLPC-Malvar</option>
+                <option>Lima</option>
+                <option>Balayan</option>
+                <option>Lemery</option>
+                <option>Rosario</option>
+                <option>San Juan</option>
+                <option>Mabini</option>
+                <option>Lobo</option>
               </select>
             </label>
             <label class="field-label">Location or barangay
-              <select class="choice">
-                <option value="">All areas</option>
-                <option value="area-alangilan">Alangilan</option>
-                <option value="area-balagtas">Balagtas</option>
-                <option value="area-balintawak">Balintawak</option>
-                <option value="area-bucana">Bucana</option>
-                <option value="area-kumintang-ibaba">Kumintang Ibaba</option>
-                <option value="area-kumintang-ilaya">Kumintang Ilaya</option>
-                <option value="area-poblacion">Poblacion</option>
-                <option value="area-santiago">Santiago</option>
+              <select>
+                <option>All areas</option>
+                <option>Alangilan</option>
+                <option>Balagtas</option>
+                <option>Balintawak</option>
+                <option>Bucana</option>
+                <option>Kumintang Ibaba</option>
+                <option>Kumintang Ilaya</option>
+                <option>Poblacion</option>
+                <option>Santiago</option>
               </select>
             </label>
             <label class="field-label">Monthly budget
-              <select id="budget">
-                <option value="">Any budget</option>
-                <option value="3000">Up to ₱3,000</option>
-                <option value="4000">Up to ₱4,000</option>
-                <option value="5000">Up to ₱5,000</option>
-                <option value="6000">Up to ₱6,000</option>
+              <select>
+                <option>Any budget</option>
+                <option>Up to ₱3,000</option>
+                <option>Up to ₱4,000</option>
+                <option>Up to ₱5,000</option>
+                <option>Up to ₱6,000</option>
               </select>
             </label>
-            <button class="btn btn-red show-btn" type="button">Search</button>
+            <button class="btn btn-red" type="button">Search</button>
           </form>
         </div>
       </section>
@@ -90,361 +90,317 @@
             <h2>Filters</h2>
             <a class="text-button" href="accommodations.html">Reset all</a>
           </div>
-          <form autocomplete="off">
+          <form>
             <div class="filter-group">
               <label class="field-label">Property type
-                <select class="choice">
-                  <option value="">Any type</option>
-                  <option value="dormitory">Dormitory</option>
-                  <option value="boarding-house">Boarding House</option>
+                <select>
+                  <option>Any type</option>
+                  <option>Dormitory</option>
+                  <option>Boarding House</option>
                 </select>
               </label>
             </div>
             <div class="filter-group">
               <label class="field-label">Room arrangement
-                <select class="choice">
-                  <option value="">Any arrangement</option>
-                  <option value="private-room">Private room</option>
-                  <option value="double-occupancy">Double occupancy</option>
-                  <option value="shared-room">Shared room</option>
-                  <option value="bedspace">Bedspace</option>
+                <select>
+                  <option>Any arrangement</option>
+                  <option>Private room</option>
+                  <option>Double occupancy</option>
+                  <option>Shared room</option>
+                  <option>Bedspace</option>
                 </select>
               </label>
             </div>
             <div class="filter-group">
               <label class="field-label">Gender policy
-                <select class="choice">
-                  <option value="">Any policy</option>
-                  <option value="female-only">Female only</option>
-                  <option value="male-only">Male only</option>
-                  <option value="co-ed">Co-ed</option>
+                <select>
+                  <option>Any policy</option>
+                  <option>Female only</option>
+                  <option>Male only</option>
+                  <option>Co-ed</option>
                 </select>
               </label>
             </div>
             <div class="filter-group">
               <p class="filter-title">Amenities</p>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="wi-fi"> Wi-Fi</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="air-conditioning"> Air conditioning</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="laundry-area"> Laundry area</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="kitchen"> Kitchen</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="study-area"> Study area</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="bike-parking"> Bike parking</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="private-bathroom"> Private bathroom</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="shared-bathroom"> Shared bathroom</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="water-included"> Water included</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="lockers"> Lockers</label>
-              <label class="check-line"><input class="amenity-box" type="checkbox" value="covered-drying-area"> Covered drying area</label>
+              <label class="check-line"><input type="checkbox"> Wi-Fi</label>
+              <label class="check-line"><input type="checkbox"> Air conditioning</label>
+              <label class="check-line"><input type="checkbox"> Laundry area</label>
+              <label class="check-line"><input type="checkbox"> Kitchen</label>
+              <label class="check-line"><input type="checkbox"> Study area</label>
+              <label class="check-line"><input type="checkbox"> Bike parking</label>
+              <label class="check-line"><input type="checkbox"> Private bathroom</label>
+              <label class="check-line"><input type="checkbox"> Shared bathroom</label>
+              <label class="check-line"><input type="checkbox"> Water included</label>
+              <label class="check-line"><input type="checkbox"> Lockers</label>
+              <label class="check-line"><input type="checkbox"> Covered drying area</label>
             </div>
-            <button class="btn btn-red filters-button show-btn" type="button">Apply filters</button>
+            <button class="btn btn-red filters-button" type="button">Apply filters</button>
           </form>
         </div>
 
         <section>
           <div class="directory-toolbar">
             <div>
-              <h2 id="results-title">Accommodations</h2>
+              <h2>Accommodations: 10</h2>
             </div>
             <label class="field-label">Sort by
-              <select id="sort-listings">
-                <option value="distance">Nearest first</option>
-                <option value="rent-low">Rent: lowest first</option>
-                <option value="rent-high">Rent: highest first</option>
+              <select>
+                <option>Nearest first</option>
+                <option>Rent: lowest first</option>
+                <option>Rent: highest first</option>
               </select>
             </label>
           </div>
-          <div class="directory-actions">
-            <a class="btn btn-soft btn-small" id="saved-view" href="accommodations.html?view=saved">Saved only</a>
-            <button class="btn btn-soft btn-small" id="compare-view" type="button">Compare</button>
-          </div>
-          <div class="listing-results">
 
-            <!-- Malvar Study Hall Dormitory -->
-            <div class="directory-card jplpc-malvar area-poblacion dormitory shared-room male-only study-area wi-fi shared-bathroom water-included" id="malvar-study-hall">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/study-area.jpg" alt="Malvar Study Hall Dormitory">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge">Available</span>
-                <h3 class="card-title open-details">Malvar Study Hall Dormitory</h3>
-                <p class="meta">Poblacion, Malvar</p>
-                <p class="distance-line">0.4 km to BatStateU JPLPC-Malvar</p>
-                <p class="room-line">Four-person room with a study hall · Male only</p>
-                <p class="meta">Study area · Wi-Fi · Shared bathroom</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Dormitory</p>
-                <p class="rent-amount">₱<span class="rent">2,900</span></p>
-                <p class="meta">per person / month</p>
-                <p class="slot-line">3 slots available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
+          <!-- Malvar Study Hall Dormitory -->
+          <div class="directory-card" id="malvar-study-hall">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/study-area.jpg" alt="Malvar Study Hall Dormitory">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
             </div>
-
-            <!-- Kumintang Student House -->
-            <div class="directory-card pablo-borbon area-kumintang-ibaba boarding-house bedspace female-only wi-fi study-area shared-bathroom lockers" id="kumintang-student-house">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/about-room.jpg" alt="Kumintang Student House">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge limited">Limited slots</span>
-                <h3 class="card-title open-details">Kumintang Student House</h3>
-                <p class="meta">Kumintang Ibaba, Batangas City</p>
-                <p class="distance-line">0.5 km to BatStateU Pablo Borbon</p>
-                <p class="room-line">Bedspace in a four-person room · Female only</p>
-                <p class="meta">Wi-Fi · Study area · Shared bathroom</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Boarding House</p>
-                <p class="rent-amount">₱<span class="rent">2,600</span></p>
-                <p class="meta">per bedspace / month</p>
-                <p class="slot-line">2 slots available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
+            <div class="directory-card-main">
+              <span class="status-badge">Available</span>
+              <h3 class="card-title">Malvar Study Hall Dormitory</h3>
+              <p class="meta">Poblacion, Malvar</p>
+              <p class="distance-line">0.4 km to BatStateU JPLPC-Malvar</p>
+              <p class="room-line">Four-person room with a study hall · Male only</p>
+              <p class="meta">Study area · Wi-Fi · Shared bathroom</p>
             </div>
-
-            <!-- Spartan Study Residence -->
-            <div class="directory-card alangilan area-alangilan dormitory shared-room female-only wi-fi study-area water-included air-conditioning laundry-area kitchen shared-bathroom" id="spartan-study-residence">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/spartan.jpg" alt="Spartan Study Residence">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge">Available</span>
-                <h3 class="card-title open-details">Spartan Study Residence</h3>
-                <p class="meta">Alangilan, Batangas City</p>
-                <p class="distance-line">0.6 km to BatStateU Alangilan</p>
-                <p class="room-line">4-person shared room · Female only</p>
-                <p class="meta">Wi-Fi · Study area · Water included</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Dormitory</p>
-                <p class="rent-amount">₱<span class="rent">2,800</span></p>
-                <p class="meta">per bedspace / month</p>
-                <p class="slot-line">3 slots available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
+            <div class="directory-rent">
+              <p class="meta">Dormitory</p>
+              <p class="rent-amount">₱2,900</p>
+              <p class="meta">per person / month</p>
+              <p class="slot-line">3 slots available</p>
+              <a class="btn btn-red btn-small" href="#malvar-study-hall-details">View Details</a>
             </div>
-
-            <!-- Bucana Dormitory -->
-            <div class="directory-card arasof-nasugbu area-bucana dormitory double-occupancy co-ed wi-fi laundry-area shared-bathroom bike-parking" id="bucana-dormitory">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/exterior.jpg" alt="Bucana Dormitory">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge limited">Limited slots</span>
-                <h3 class="card-title open-details">Bucana Dormitory</h3>
-                <p class="meta">Bucana, Nasugbu</p>
-                <p class="distance-line">0.7 km to BatStateU ARASOF-Nasugbu</p>
-                <p class="room-line">Double room on the second floor · Co-ed</p>
-                <p class="meta">Wi-Fi · Laundry area · Shared bathroom</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Dormitory</p>
-                <p class="rent-amount">₱<span class="rent">2,300</span></p>
-                <p class="meta">per person / month</p>
-                <p class="slot-line">1 slot available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
-            <!-- Acacia Student Boarding House -->
-            <div class="directory-card alangilan area-alangilan boarding-house double-occupancy male-only wi-fi kitchen laundry-area shared-bathroom bike-parking" id="acacia-student-boarding-house">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/acacia.jpg" alt="Acacia Student Boarding House">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge limited">Limited slots</span>
-                <h3 class="card-title open-details">Acacia Student Boarding House</h3>
-                <p class="meta">Alangilan, Batangas City</p>
-                <p class="distance-line">0.8 km to BatStateU Alangilan</p>
-                <p class="room-line">Twin room with individual desks · Male only</p>
-                <p class="meta">Wi-Fi · Kitchen · Laundry area</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Boarding House</p>
-                <p class="rent-amount">₱<span class="rent">3,250</span></p>
-                <p class="meta">per person / month</p>
-                <p class="slot-line">1 slot available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
-            <!-- Casa Maharlika Boarding House -->
-            <div class="directory-card pablo-borbon area-kumintang-ibaba boarding-house double-occupancy male-only wi-fi kitchen bike-parking shared-bathroom lockers" id="casa-maharlika-boarding-house">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/maharlika.jpg" alt="Casa Maharlika Boarding House">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge limited">Limited slots</span>
-                <h3 class="card-title open-details">Casa Maharlika Boarding House</h3>
-                <p class="meta">Kumintang Ibaba, Batangas City</p>
-                <p class="distance-line">0.8 km to BatStateU Pablo Borbon</p>
-                <p class="room-line">2-person shared room · Male only</p>
-                <p class="meta">Wi-Fi · Kitchen · Bike parking</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Boarding House</p>
-                <p class="rent-amount">₱<span class="rent">3,500</span></p>
-                <p class="meta">per person / month</p>
-                <p class="slot-line">2 slots available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
-            <!-- Tahanan Study House -->
-            <div class="directory-card alangilan area-balagtas boarding-house bedspace co-ed kitchen shared-bathroom lockers covered-drying-area" id="tahanan-study-house">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/tahanan.jpg" alt="Tahanan Study House">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge">Availability unconfirmed</span>
-                <h3 class="card-title open-details">Tahanan Study House</h3>
-                <p class="meta">Balagtas, Batangas City</p>
-                <p class="distance-line">0.9 km to BatStateU Alangilan</p>
-                <p class="room-line">4-bed room with shared cabinets · Co-ed</p>
-                <p class="meta">Kitchen · Shared bathroom · Lockers</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Boarding House</p>
-                <p class="rent-amount">₱<span class="rent">2,400</span></p>
-                <p class="meta">per bedspace / month</p>
-                <p class="slot-line">Ask the owner about availability</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
-            <!-- Santiago Boarding House -->
-            <div class="directory-card lima area-santiago boarding-house double-occupancy female-only kitchen wi-fi laundry-area shared-bathroom" id="santiago-boarding-house">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/kitchen.jpg" alt="Santiago Boarding House">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge limited">Limited slots</span>
-                <h3 class="card-title open-details">Santiago Boarding House</h3>
-                <p class="meta">Santiago, Malvar</p>
-                <p class="distance-line">1.1 km to BatStateU Lima</p>
-                <p class="room-line">Two-person room with a shared kitchen · Female only</p>
-                <p class="meta">Kitchen · Wi-Fi · Laundry area</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Boarding House</p>
-                <p class="rent-amount">₱<span class="rent">3,100</span></p>
-                <p class="meta">per person / month</p>
-                <p class="slot-line">2 slots available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
-            <!-- The Study Nook Dormitory -->
-            <div class="directory-card lipa area-balintawak dormitory private-room co-ed wi-fi air-conditioning private-bathroom covered-drying-area" id="the-study-nook-dormitory">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/study-nook.jpg" alt="The Study Nook Dormitory">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge limited">Limited slots</span>
-                <h3 class="card-title open-details">The Study Nook Dormitory</h3>
-                <p class="meta">Balintawak, Lipa City</p>
-                <p class="distance-line">1.2 km to BatStateU Lipa</p>
-                <p class="room-line">Private room for 1–2 people · Co-ed</p>
-                <p class="meta">Wi-Fi · Air conditioning · Private bathroom</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Dormitory</p>
-                <p class="rent-amount">₱<span class="rent">5,500</span></p>
-                <p class="meta">per room / month</p>
-                <p class="slot-line">1 room available</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
-            <!-- Mabini Student Rooms -->
-            <div class="directory-card alangilan area-kumintang-ilaya dormitory private-room co-ed wi-fi air-conditioning private-bathroom study-area" id="mabini-student-rooms">
-              <div class="directory-photo">
-                <img class="property-photo open-details" src="../assets/properties/mabini.jpg" alt="Mabini Student Rooms">
-                <button class="save-btn" type="button">
-                  <img class="heart-icon heart-outline" src="../assets/icons/heart.svg" alt="Save">
-                  <img class="heart-icon heart-filled" src="../assets/icons/heart-filled.svg" alt="Saved">
-                </button>
-              </div>
-              <div class="directory-card-main">
-                <span class="status-badge full">Fully occupied</span>
-                <h3 class="card-title open-details">Mabini Student Rooms</h3>
-                <p class="meta">Kumintang Ilaya, Batangas City</p>
-                <p class="distance-line">1.4 km to BatStateU Alangilan</p>
-                <p class="room-line">Solo room with a private bathroom · Co-ed</p>
-                <p class="meta">Wi-Fi · Air conditioning · Private bathroom</p>
-                <label class="compare"><input class="compare-checkbox" type="checkbox"> Compare</label>
-                <p class="card-message"></p>
-              </div>
-              <div class="directory-rent">
-                <p class="meta">Dormitory</p>
-                <p class="rent-amount">₱<span class="rent">5,100</span></p>
-                <p class="meta">per room / month</p>
-                <p class="slot-line">No open slots</p>
-                <button class="btn btn-red btn-small open-details" type="button">View Details</button>
-              </div>
-            </div>
-
           </div>
 
-          <!-- Shown when there are no listings -->
-          <div class="empty-state hidden" id="empty-state">
-            <h3>No listings here yet</h3>
-            <p>New places are still on the way. Try another campus or change your filters.</p>
-            <a class="btn btn-red" href="accommodations.html">Show all accommodations</a>
+          <!-- Kumintang Student House -->
+          <div class="directory-card" id="kumintang-student-house">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/about-room.jpg" alt="Kumintang Student House">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge limited">Limited slots</span>
+              <h3 class="card-title">Kumintang Student House</h3>
+              <p class="meta">Kumintang Ibaba, Batangas City</p>
+              <p class="distance-line">0.5 km to BatStateU Pablo Borbon</p>
+              <p class="room-line">Bedspace in a four-person room · Female only</p>
+              <p class="meta">Wi-Fi · Study area · Shared bathroom</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Boarding House</p>
+              <p class="rent-amount">₱2,600</p>
+              <p class="meta">per bedspace / month</p>
+              <p class="slot-line">2 slots available</p>
+              <a class="btn btn-red btn-small" href="#kumintang-student-house-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Spartan Study Residence -->
+          <div class="directory-card" id="spartan-study-residence">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/spartan.jpg" alt="Spartan Study Residence">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge">Available</span>
+              <h3 class="card-title">Spartan Study Residence</h3>
+              <p class="meta">Alangilan, Batangas City</p>
+              <p class="distance-line">0.6 km to BatStateU Alangilan</p>
+              <p class="room-line">4-person shared room · Female only</p>
+              <p class="meta">Wi-Fi · Study area · Water included</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Dormitory</p>
+              <p class="rent-amount">₱2,800</p>
+              <p class="meta">per bedspace / month</p>
+              <p class="slot-line">3 slots available</p>
+              <a class="btn btn-red btn-small" href="#spartan-study-residence-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Bucana Dormitory -->
+          <div class="directory-card" id="bucana-dormitory">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/exterior.jpg" alt="Bucana Dormitory">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge limited">Limited slots</span>
+              <h3 class="card-title">Bucana Dormitory</h3>
+              <p class="meta">Bucana, Nasugbu</p>
+              <p class="distance-line">0.7 km to BatStateU ARASOF-Nasugbu</p>
+              <p class="room-line">Double room on the second floor · Co-ed</p>
+              <p class="meta">Wi-Fi · Laundry area · Shared bathroom</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Dormitory</p>
+              <p class="rent-amount">₱2,300</p>
+              <p class="meta">per person / month</p>
+              <p class="slot-line">1 slot available</p>
+              <a class="btn btn-red btn-small" href="#bucana-dormitory-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Acacia Student Boarding House -->
+          <div class="directory-card" id="acacia-student-boarding-house">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/acacia.jpg" alt="Acacia Student Boarding House">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge limited">Limited slots</span>
+              <h3 class="card-title">Acacia Student Boarding House</h3>
+              <p class="meta">Alangilan, Batangas City</p>
+              <p class="distance-line">0.8 km to BatStateU Alangilan</p>
+              <p class="room-line">Twin room with individual desks · Male only</p>
+              <p class="meta">Wi-Fi · Kitchen · Laundry area</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Boarding House</p>
+              <p class="rent-amount">₱3,250</p>
+              <p class="meta">per person / month</p>
+              <p class="slot-line">1 slot available</p>
+              <a class="btn btn-red btn-small" href="#acacia-student-boarding-house-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Casa Maharlika Boarding House -->
+          <div class="directory-card" id="casa-maharlika-boarding-house">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/maharlika.jpg" alt="Casa Maharlika Boarding House">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge limited">Limited slots</span>
+              <h3 class="card-title">Casa Maharlika Boarding House</h3>
+              <p class="meta">Kumintang Ibaba, Batangas City</p>
+              <p class="distance-line">0.8 km to BatStateU Pablo Borbon</p>
+              <p class="room-line">2-person shared room · Male only</p>
+              <p class="meta">Wi-Fi · Kitchen · Bike parking</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Boarding House</p>
+              <p class="rent-amount">₱3,500</p>
+              <p class="meta">per person / month</p>
+              <p class="slot-line">2 slots available</p>
+              <a class="btn btn-red btn-small" href="#casa-maharlika-boarding-house-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Tahanan Study House -->
+          <div class="directory-card" id="tahanan-study-house">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/tahanan.jpg" alt="Tahanan Study House">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge">Availability unconfirmed</span>
+              <h3 class="card-title">Tahanan Study House</h3>
+              <p class="meta">Balagtas, Batangas City</p>
+              <p class="distance-line">0.9 km to BatStateU Alangilan</p>
+              <p class="room-line">4-bed room with shared cabinets · Co-ed</p>
+              <p class="meta">Kitchen · Shared bathroom · Lockers</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Boarding House</p>
+              <p class="rent-amount">₱2,400</p>
+              <p class="meta">per bedspace / month</p>
+              <p class="slot-line">Ask the owner about availability</p>
+              <a class="btn btn-red btn-small" href="#tahanan-study-house-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Santiago Boarding House -->
+          <div class="directory-card" id="santiago-boarding-house">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/kitchen.jpg" alt="Santiago Boarding House">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge limited">Limited slots</span>
+              <h3 class="card-title">Santiago Boarding House</h3>
+              <p class="meta">Santiago, Malvar</p>
+              <p class="distance-line">1.1 km to BatStateU Lima</p>
+              <p class="room-line">Two-person room with a shared kitchen · Female only</p>
+              <p class="meta">Kitchen · Wi-Fi · Laundry area</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Boarding House</p>
+              <p class="rent-amount">₱3,100</p>
+              <p class="meta">per person / month</p>
+              <p class="slot-line">2 slots available</p>
+              <a class="btn btn-red btn-small" href="#santiago-boarding-house-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- The Study Nook Dormitory -->
+          <div class="directory-card" id="the-study-nook-dormitory">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/study-nook.jpg" alt="The Study Nook Dormitory">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge limited">Limited slots</span>
+              <h3 class="card-title">The Study Nook Dormitory</h3>
+              <p class="meta">Balintawak, Lipa City</p>
+              <p class="distance-line">1.2 km to BatStateU Lipa</p>
+              <p class="room-line">Private room for 1–2 people · Co-ed</p>
+              <p class="meta">Wi-Fi · Air conditioning · Private bathroom</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Dormitory</p>
+              <p class="rent-amount">₱5,500</p>
+              <p class="meta">per room / month</p>
+              <p class="slot-line">1 room available</p>
+              <a class="btn btn-red btn-small" href="#the-study-nook-dormitory-details">View Details</a>
+            </div>
+          </div>
+
+          <!-- Mabini Student Rooms -->
+          <div class="directory-card" id="mabini-student-rooms">
+            <div class="directory-photo">
+              <img class="property-photo" src="../assets/properties/mabini.jpg" alt="Mabini Student Rooms">
+              <button class="save-btn" type="button">
+                <img class="heart-icon" src="../assets/icons/heart.svg" alt="Save">
+              </button>
+            </div>
+            <div class="directory-card-main">
+              <span class="status-badge full">Fully occupied</span>
+              <h3 class="card-title">Mabini Student Rooms</h3>
+              <p class="meta">Kumintang Ilaya, Batangas City</p>
+              <p class="distance-line">1.4 km to BatStateU Alangilan</p>
+              <p class="room-line">Solo room with a private bathroom · Co-ed</p>
+              <p class="meta">Wi-Fi · Air conditioning · Private bathroom</p>
+            </div>
+            <div class="directory-rent">
+              <p class="meta">Dormitory</p>
+              <p class="rent-amount">₱5,100</p>
+              <p class="meta">per room / month</p>
+              <p class="slot-line">No open slots</p>
+              <a class="btn btn-red btn-small" href="#mabini-student-rooms-details">View Details</a>
+            </div>
           </div>
 
           <p class="meta results-foot">Ask the owner to confirm the price, room setup, and availability before arranging a viewing.</p>
@@ -460,21 +416,21 @@
             <h2>Malvar Study Hall Dormitory</h2>
             <p class="meta">Poblacion, Malvar · Dormitory</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#malvar-study-hall">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/study-area.jpg" alt="Photo of Malvar Study Hall Dormitory">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/study-area.jpg" alt=""> Study area
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -554,8 +510,7 @@
               <h3>Property owner</h3>
               <p><strong>Teresa Manalo</strong></p>
               <p class="meta">Preferred contact: Email · Replies on weekdays</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · malvar@example.com</p>
+              <p>09XX XXX XXXX · malvar@example.com</p>
             </div>
           </div>
         </div>
@@ -570,24 +525,24 @@
             <h2>Kumintang Student House</h2>
             <p class="meta">Kumintang Ibaba, Batangas City · Boarding House</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#kumintang-student-house">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/about-room.jpg" alt="Photo of Kumintang Student House">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/about-room.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/study-area.jpg" alt=""> Study area
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -667,8 +622,7 @@
               <h3>Property owner</h3>
               <p><strong>Liza Marasigan</strong></p>
               <p class="meta">Preferred contact: SMS · 9 AM–8 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · kumintang@example.com</p>
+              <p>09XX XXX XXXX · kumintang@example.com</p>
             </div>
           </div>
         </div>
@@ -683,27 +637,27 @@
             <h2>Spartan Study Residence</h2>
             <p class="meta">Alangilan, Batangas City · Dormitory</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#spartan-study-residence">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/spartan.jpg" alt="Photo of Spartan Study Residence">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/spartan.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/kitchen.jpg" alt=""> Kitchen
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/study-area.jpg" alt=""> Study area
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -786,8 +740,7 @@
               <h3>Property owner</h3>
               <p><strong>Marina Dela Cruz</strong></p>
               <p class="meta">Preferred contact: SMS · 9 AM–6 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · spartan@example.com</p>
+              <p>09XX XXX XXXX · spartan@example.com</p>
             </div>
           </div>
         </div>
@@ -802,18 +755,18 @@
             <h2>Bucana Dormitory</h2>
             <p class="meta">Bucana, Nasugbu · Dormitory</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#bucana-dormitory">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/exterior.jpg" alt="Photo of Bucana Dormitory">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -893,8 +846,7 @@
               <h3>Property owner</h3>
               <p><strong>Ernesto Salazar</strong></p>
               <p class="meta">Preferred contact: Phone · 8 AM–6 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · bucana@example.com</p>
+              <p>09XX XXX XXXX · bucana@example.com</p>
             </div>
           </div>
         </div>
@@ -909,24 +861,24 @@
             <h2>Acacia Student Boarding House</h2>
             <p class="meta">Alangilan, Batangas City · Boarding House</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#acacia-student-boarding-house">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/acacia.jpg" alt="Photo of Acacia Student Boarding House">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/acacia.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/kitchen.jpg" alt=""> Kitchen
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -1007,8 +959,7 @@
               <h3>Property owner</h3>
               <p><strong>Joel Villanueva</strong></p>
               <p class="meta">Preferred contact: Phone · Weekdays after 4 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · acacia@example.com</p>
+              <p>09XX XXX XXXX · acacia@example.com</p>
             </div>
           </div>
         </div>
@@ -1023,24 +974,24 @@
             <h2>Casa Maharlika Boarding House</h2>
             <p class="meta">Kumintang Ibaba, Batangas City · Boarding House</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#casa-maharlika-boarding-house">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/maharlika.jpg" alt="Photo of Casa Maharlika Boarding House">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/maharlika.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/kitchen.jpg" alt=""> Kitchen
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -1121,8 +1072,7 @@
               <h3>Property owner</h3>
               <p><strong>Paolo Macaraig</strong></p>
               <p class="meta">Preferred contact: SMS · 8 AM–7 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · maharlika@example.com</p>
+              <p>09XX XXX XXXX · maharlika@example.com</p>
             </div>
           </div>
         </div>
@@ -1137,24 +1087,24 @@
             <h2>Tahanan Study House</h2>
             <p class="meta">Balagtas, Batangas City · Boarding House</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#tahanan-study-house">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/tahanan.jpg" alt="Photo of Tahanan Study House">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/tahanan.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/kitchen.jpg" alt=""> Kitchen
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -1234,8 +1184,7 @@
               <h3>Property owner</h3>
               <p><strong>Nerissa Aguilar</strong></p>
               <p class="meta">Preferred contact: SMS · Saturdays and Sundays</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · tahanan@example.com</p>
+              <p>09XX XXX XXXX · tahanan@example.com</p>
             </div>
           </div>
         </div>
@@ -1250,21 +1199,21 @@
             <h2>Santiago Boarding House</h2>
             <p class="meta">Santiago, Malvar · Boarding House</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#santiago-boarding-house">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/kitchen.jpg" alt="Photo of Santiago Boarding House">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/kitchen.jpg" alt=""> Kitchen
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/shared-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -1344,8 +1293,7 @@
               <h3>Property owner</h3>
               <p><strong>Carmela Hernandez</strong></p>
               <p class="meta">Preferred contact: SMS · 10 AM–7 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · santiago@example.com</p>
+              <p>09XX XXX XXXX · santiago@example.com</p>
             </div>
           </div>
         </div>
@@ -1360,21 +1308,21 @@
             <h2>The Study Nook Dormitory</h2>
             <p class="meta">Balintawak, Lipa City · Dormitory</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#the-study-nook-dormitory">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/study-nook.jpg" alt="Photo of The Study Nook Dormitory">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/study-nook.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/private-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -1454,8 +1402,7 @@
               <h3>Property owner</h3>
               <p><strong>Althea Dimaculangan</strong></p>
               <p class="meta">Preferred contact: Email · Replies on weekdays</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · study-nook@example.com</p>
+              <p>09XX XXX XXXX · study-nook@example.com</p>
             </div>
           </div>
         </div>
@@ -1470,24 +1417,24 @@
             <h2>Mabini Student Rooms</h2>
             <p class="meta">Kumintang Ilaya, Batangas City · Dormitory</p>
           </div>
-          <button class="popup-close" type="button">×</button>
+          <a class="popup-close" href="#mabini-student-rooms">×</a>
         </div>
         <div class="property-detail-grid">
           <div>
             <img class="gallery-photo" src="../assets/properties/mabini.jpg" alt="Photo of Mabini Student Rooms">
             <div class="gallery-thumbs">
-              <button class="gallery-thumb active" type="button">
+              <div class="gallery-thumb active">
                 <img src="../assets/properties/mabini.jpg" alt=""> Bedroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/private-bath.jpg" alt=""> Bathroom
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/study-area.jpg" alt=""> Study area
-              </button>
-              <button class="gallery-thumb" type="button">
+              </div>
+              <div class="gallery-thumb">
                 <img src="../assets/properties/exterior.jpg" alt=""> Exterior
-              </button>
+              </div>
             </div>
             <div class="detail-section">
               <h3>About this accommodation</h3>
@@ -1567,141 +1514,9 @@
               <h3>Property owner</h3>
               <p><strong>Rafael Mendoza</strong></p>
               <p class="meta">Preferred contact: Phone · 10 AM–5 PM</p>
-              <button class="btn btn-red contact-button" type="button">Contact Owner</button>
-              <p class="contact-details">09XX XXX XXXX · mabini@example.com</p>
+              <p>09XX XXX XXXX · mabini@example.com</p>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Compare: one column per listing, only the chosen ones are shown -->
-    <div class="popup" id="compare-popup">
-      <div class="popup-box">
-        <div class="popup-heading">
-          <h2>Compare accommodations</h2>
-          <button class="popup-close" type="button">×</button>
-        </div>
-        <div class="comparison">
-          <table class="comparison-table">
-            <tr class="comparison-names">
-              <th>Feature</th>
-              <th class="spartan-study-residence-cell">Spartan Study Residence</th>
-              <th class="acacia-student-boarding-house-cell">Acacia Student Boarding House</th>
-              <th class="tahanan-study-house-cell">Tahanan Study House</th>
-              <th class="mabini-student-rooms-cell">Mabini Student Rooms</th>
-              <th class="casa-maharlika-boarding-house-cell">Casa Maharlika Boarding House</th>
-              <th class="the-study-nook-dormitory-cell">The Study Nook Dormitory</th>
-              <th class="kumintang-student-house-cell">Kumintang Student House</th>
-              <th class="bucana-dormitory-cell">Bucana Dormitory</th>
-              <th class="malvar-study-hall-cell">Malvar Study Hall Dormitory</th>
-              <th class="santiago-boarding-house-cell">Santiago Boarding House</th>
-            </tr>
-            <tr>
-              <th>Campus</th>
-              <td class="spartan-study-residence-cell">BatStateU Alangilan</td>
-              <td class="acacia-student-boarding-house-cell">BatStateU Alangilan</td>
-              <td class="tahanan-study-house-cell">BatStateU Alangilan</td>
-              <td class="mabini-student-rooms-cell">BatStateU Alangilan</td>
-              <td class="casa-maharlika-boarding-house-cell">BatStateU Pablo Borbon</td>
-              <td class="the-study-nook-dormitory-cell">BatStateU Lipa</td>
-              <td class="kumintang-student-house-cell">BatStateU Pablo Borbon</td>
-              <td class="bucana-dormitory-cell">BatStateU ARASOF-Nasugbu</td>
-              <td class="malvar-study-hall-cell">BatStateU JPLPC-Malvar</td>
-              <td class="santiago-boarding-house-cell">BatStateU Lima</td>
-            </tr>
-            <tr>
-              <th>Monthly rent</th>
-              <td class="spartan-study-residence-cell">₱2,800 per bedspace</td>
-              <td class="acacia-student-boarding-house-cell">₱3,250 per person</td>
-              <td class="tahanan-study-house-cell">₱2,400 per bedspace</td>
-              <td class="mabini-student-rooms-cell">₱5,100 per room</td>
-              <td class="casa-maharlika-boarding-house-cell">₱3,500 per person</td>
-              <td class="the-study-nook-dormitory-cell">₱5,500 per room</td>
-              <td class="kumintang-student-house-cell">₱2,600 per bedspace</td>
-              <td class="bucana-dormitory-cell">₱2,300 per person</td>
-              <td class="malvar-study-hall-cell">₱2,900 per person</td>
-              <td class="santiago-boarding-house-cell">₱3,100 per person</td>
-            </tr>
-            <tr>
-              <th>Distance</th>
-              <td class="spartan-study-residence-cell">0.6 km</td>
-              <td class="acacia-student-boarding-house-cell">0.8 km</td>
-              <td class="tahanan-study-house-cell">0.9 km</td>
-              <td class="mabini-student-rooms-cell">1.4 km</td>
-              <td class="casa-maharlika-boarding-house-cell">0.8 km</td>
-              <td class="the-study-nook-dormitory-cell">1.2 km</td>
-              <td class="kumintang-student-house-cell">0.5 km</td>
-              <td class="bucana-dormitory-cell">0.7 km</td>
-              <td class="malvar-study-hall-cell">0.4 km</td>
-              <td class="santiago-boarding-house-cell">1.1 km</td>
-            </tr>
-            <tr>
-              <th>Room arrangement</th>
-              <td class="spartan-study-residence-cell">4-person shared room</td>
-              <td class="acacia-student-boarding-house-cell">Twin room with individual desks</td>
-              <td class="tahanan-study-house-cell">4-bed room with shared cabinets</td>
-              <td class="mabini-student-rooms-cell">Solo room with a private bathroom</td>
-              <td class="casa-maharlika-boarding-house-cell">2-person shared room</td>
-              <td class="the-study-nook-dormitory-cell">Private room for 1–2 people</td>
-              <td class="kumintang-student-house-cell">Bedspace in a four-person room</td>
-              <td class="bucana-dormitory-cell">Double room on the second floor</td>
-              <td class="malvar-study-hall-cell">Four-person room with a study hall</td>
-              <td class="santiago-boarding-house-cell">Two-person room with a shared kitchen</td>
-            </tr>
-            <tr>
-              <th>Gender policy</th>
-              <td class="spartan-study-residence-cell">Female only</td>
-              <td class="acacia-student-boarding-house-cell">Male only</td>
-              <td class="tahanan-study-house-cell">Co-ed</td>
-              <td class="mabini-student-rooms-cell">Co-ed</td>
-              <td class="casa-maharlika-boarding-house-cell">Male only</td>
-              <td class="the-study-nook-dormitory-cell">Co-ed</td>
-              <td class="kumintang-student-house-cell">Female only</td>
-              <td class="bucana-dormitory-cell">Co-ed</td>
-              <td class="malvar-study-hall-cell">Male only</td>
-              <td class="santiago-boarding-house-cell">Female only</td>
-            </tr>
-            <tr>
-              <th>Availability</th>
-              <td class="spartan-study-residence-cell">3 slots available</td>
-              <td class="acacia-student-boarding-house-cell">1 slot available</td>
-              <td class="tahanan-study-house-cell">Ask the owner about availability</td>
-              <td class="mabini-student-rooms-cell">No open slots</td>
-              <td class="casa-maharlika-boarding-house-cell">2 slots available</td>
-              <td class="the-study-nook-dormitory-cell">1 room available</td>
-              <td class="kumintang-student-house-cell">2 slots available</td>
-              <td class="bucana-dormitory-cell">1 slot available</td>
-              <td class="malvar-study-hall-cell">3 slots available</td>
-              <td class="santiago-boarding-house-cell">2 slots available</td>
-            </tr>
-            <tr>
-              <th>Amenities</th>
-              <td class="spartan-study-residence-cell">Wi-Fi, Study area, Water included, Air conditioning, Laundry area, Kitchen, Shared bathroom</td>
-              <td class="acacia-student-boarding-house-cell">Wi-Fi, Kitchen, Laundry area, Shared bathroom, Bike parking</td>
-              <td class="tahanan-study-house-cell">Kitchen, Shared bathroom, Lockers, Covered drying area</td>
-              <td class="mabini-student-rooms-cell">Wi-Fi, Air conditioning, Private bathroom, Study area</td>
-              <td class="casa-maharlika-boarding-house-cell">Wi-Fi, Kitchen, Bike parking, Shared bathroom, Lockers</td>
-              <td class="the-study-nook-dormitory-cell">Wi-Fi, Air conditioning, Private bathroom, Covered drying area</td>
-              <td class="kumintang-student-house-cell">Wi-Fi, Study area, Shared bathroom, Lockers</td>
-              <td class="bucana-dormitory-cell">Wi-Fi, Laundry area, Shared bathroom, Bike parking</td>
-              <td class="malvar-study-hall-cell">Study area, Wi-Fi, Shared bathroom, Water included</td>
-              <td class="santiago-boarding-house-cell">Kitchen, Wi-Fi, Laundry area, Shared bathroom</td>
-            </tr>
-            <tr>
-              <th>Included in rent</th>
-              <td class="spartan-study-residence-cell">Water and shared Wi-Fi</td>
-              <td class="acacia-student-boarding-house-cell">Wi-Fi and a basic electricity allowance</td>
-              <td class="tahanan-study-house-cell">Water and use of shared kitchen</td>
-              <td class="mabini-student-rooms-cell">Wi-Fi and water</td>
-              <td class="casa-maharlika-boarding-house-cell">Shared Wi-Fi and bicycle parking</td>
-              <td class="the-study-nook-dormitory-cell">Fiber Wi-Fi, water, and common-area cleaning</td>
-              <td class="kumintang-student-house-cell">Water and shared Wi-Fi</td>
-              <td class="bucana-dormitory-cell">Water and bike parking</td>
-              <td class="malvar-study-hall-cell">Water and shared Wi-Fi</td>
-              <td class="santiago-boarding-house-cell">Water and use of the kitchen</td>
-            </tr>
-          </table>
         </div>
       </div>
     </div>

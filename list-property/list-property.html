@@ -28,7 +28,7 @@
         <ul class="nav-links nav-links-right">
           <li><a class="nav-link" href="../about/about.html">About</a></li>
           <li><a class="nav-link" href="../about/about.html#contact">Contact</a></li>
-          <li><a class="btn btn-outline-light" href="../accommodations/accommodations.html?view=saved">Saved <span class="saved-count"></span></a></li>
+          <li><a class="btn btn-outline-light" href="../accommodations/accommodations.html">Saved</a></li>
         </ul>
       </nav>
     </header>
@@ -42,19 +42,19 @@
           <p class="meta required-note">Fields marked * are required.</p>
         </div>
       </section>
-      <form class="container submission-form" id="listing-form">
+      <form class="container submission-form">
         <section class="form-section">
           <div>
             <h2>Owner information</h2>
             <p class="meta">Tell students who to contact about this accommodation.</p>
           </div>
           <div class="field-grid">
-            <label class="field-label">Full name *<input name="owner" autocomplete="name" required></label>
-            <label class="field-label">Email address *<input type="email" name="email" autocomplete="email" required></label>
-            <label class="field-label">Contact number *<input type="tel" name="phone" autocomplete="tel" required></label>
+            <label class="field-label">Full name *<input autocomplete="name"></label>
+            <label class="field-label">Email address *<input type="email" autocomplete="email"></label>
+            <label class="field-label">Contact number *<input type="tel" autocomplete="tel"></label>
             <label class="field-label">Preferred contact method *
-              <select name="contact" required>
-                <option value="">Choose a method</option>
+              <select>
+                <option>Choose a method</option>
                 <option>SMS</option>
                 <option>Phone call</option>
                 <option>Email</option>
@@ -68,30 +68,30 @@
             <p class="meta">Introduce your space and choose the BatStateU campus it serves.</p>
           </div>
           <div class="field-grid">
-            <label class="field-label">Property name *<input name="property" required></label>
+            <label class="field-label">Property name *<input></label>
             <label class="field-label">Property type *
-              <select name="type" required>
-                <option value="">Choose a property type</option>
+              <select>
+                <option>Choose a property type</option>
                 <option>Dormitory</option>
                 <option>Boarding House</option>
               </select>
             </label>
-            <label class="span-all field-label">Property description *<textarea name="description" rows="3" required placeholder="Describe the room, who it suits, and spaces tenants share."></textarea></label>
+            <label class="span-all field-label">Property description *<textarea rows="3" placeholder="Describe the room, who it suits, and spaces tenants share."></textarea></label>
             <label class="field-label">Campus served *
-              <select name="campus" required>
-                <option value="">Choose a campus</option>
-                <option value="alangilan">Alangilan</option>
-                <option value="pablo-borbon">Pablo Borbon</option>
-                <option value="lipa">Lipa</option>
-                <option value="arasof-nasugbu">ARASOF-Nasugbu</option>
-                <option value="jplpc-malvar">JPLPC-Malvar</option>
-                <option value="lima">Lima</option>
-                <option value="balayan">Balayan</option>
-                <option value="lemery">Lemery</option>
-                <option value="rosario">Rosario</option>
-                <option value="san-juan">San Juan</option>
-                <option value="mabini">Mabini</option>
-                <option value="lobo">Lobo</option>
+              <select>
+                <option>Choose a campus</option>
+                <option>Alangilan</option>
+                <option>Pablo Borbon</option>
+                <option>Lipa</option>
+                <option>ARASOF-Nasugbu</option>
+                <option>JPLPC-Malvar</option>
+                <option>Lima</option>
+                <option>Balayan</option>
+                <option>Lemery</option>
+                <option>Rosario</option>
+                <option>San Juan</option>
+                <option>Mabini</option>
+                <option>Lobo</option>
               </select>
             </label>
           </div>
@@ -102,10 +102,10 @@
             <p class="meta">Add the complete address and a landmark students can use to find it.</p>
           </div>
           <div class="field-grid">
-            <label class="span-all field-label">Complete address *<input name="address" autocomplete="street-address" required></label>
-            <label class="field-label">Barangay *<input name="barangay" required></label>
-            <label class="field-label">City or municipality *<input name="city" autocomplete="address-level2" required></label>
-            <label class="field-label">Nearby landmark<input name="landmark"></label>
+            <label class="span-all field-label">Complete address *<input autocomplete="street-address"></label>
+            <label class="field-label">Barangay *<input></label>
+            <label class="field-label">City or municipality *<input autocomplete="address-level2"></label>
+            <label class="field-label">Nearby landmark<input></label>
           </div>
         </section>
         <section class="form-section">
@@ -114,84 +114,84 @@
             <p class="meta">Show what rent covers and what students will pay when they move in.</p>
           </div>
           <div class="field-grid">
-            <label class="field-label">Monthly rental price (₱) *<input name="rent" type="number" min="1" required></label>
+            <label class="field-label">Monthly rental price (₱) *<input type="number" min="1"></label>
             <label class="field-label">Price basis *
-              <select name="basis" required>
-                <option value="">Choose a price basis</option>
-                <option value="bedspace">Per bedspace</option>
-                <option value="person">Per person</option>
-                <option value="room">Per room</option>
+              <select>
+                <option>Choose a price basis</option>
+                <option>Per bedspace</option>
+                <option>Per person</option>
+                <option>Per room</option>
               </select>
             </label>
-            <label class="field-label">Advance payment (₱) *<input name="advance" type="number" min="0" required placeholder="0 if none"></label>
-            <label class="field-label">Security deposit (₱) *<input name="deposit" type="number" min="0" required placeholder="0 if none"></label>
+            <label class="field-label">Advance payment (₱) *<input type="number" min="0" placeholder="0 if none"></label>
+            <label class="field-label">Security deposit (₱) *<input type="number" min="0" placeholder="0 if none"></label>
             <div class="span-all expenses">
               <div class="field-grid expense-row">
                 <label class="field-label">Water expenses *
-                  <select name="water" required>
-                    <option value="">Included or extra?</option>
+                  <select>
+                    <option>Included or extra?</option>
                     <option>Included in rent</option>
                     <option>Separate charge</option>
                     <option>Unavailable</option>
                   </select>
                 </label>
-                <label class="field-label">Water charging details<input name="waterDetails" placeholder="For example, billed by meter"></label>
+                <label class="field-label">Water charging details<input placeholder="For example, billed by meter"></label>
               </div>
               <div class="field-grid expense-row">
                 <label class="field-label">Electricity expenses *
-                  <select name="electricity" required>
-                    <option value="">Included or extra?</option>
+                  <select>
+                    <option>Included or extra?</option>
                     <option>Included in rent</option>
                     <option>Separate charge</option>
                     <option>Unavailable</option>
                   </select>
                 </label>
-                <label class="field-label">Electricity charging details<input name="electricityDetails" placeholder="For example, billed by meter"></label>
+                <label class="field-label">Electricity charging details<input placeholder="For example, billed by meter"></label>
               </div>
               <div class="field-grid expense-row">
                 <label class="field-label">Internet expenses *
-                  <select name="internet" required>
-                    <option value="">Included or extra?</option>
+                  <select>
+                    <option>Included or extra?</option>
                     <option>Included in rent</option>
                     <option>Separate charge</option>
                     <option>Unavailable</option>
                   </select>
                 </label>
-                <label class="field-label">Internet charging details<input name="internetDetails" placeholder="For example, billed by meter"></label>
+                <label class="field-label">Internet charging details<input placeholder="For example, billed by meter"></label>
               </div>
             </div>
-            <label class="span-all field-label">Other charges<textarea name="charges" rows="2" placeholder="Add any optional or shared expenses."></textarea></label>
+            <label class="span-all field-label">Other charges<textarea rows="2" placeholder="Add any optional or shared expenses."></textarea></label>
           </div>
         </section>
         <section class="form-section">
           <div>
             <h2>Room &amp; occupancy</h2>
-            <p class="meta">Enter counts for the room being advertised. Available spaces are calculated from capacity and current occupancy.</p>
+            <p class="meta">Enter counts for the room being advertised.</p>
           </div>
           <div class="field-grid">
             <label class="field-label">Room arrangement *
-              <select name="room" required>
-                <option value="">Choose an arrangement</option>
+              <select>
+                <option>Choose an arrangement</option>
                 <option>Private room</option>
                 <option>Double occupancy</option>
                 <option>Shared room</option>
                 <option>Bedspace</option>
               </select>
             </label>
-            <label class="field-label">Maximum room capacity *<input name="capacity" type="number" min="1" required></label>
-            <label class="field-label">Current occupants *<input name="occupied" type="number" min="0" required></label>
-            <label class="field-label">Available spaces<input id="spaces-left" readonly></label>
+            <label class="field-label">Maximum room capacity *<input type="number" min="1"></label>
+            <label class="field-label">Current occupants *<input type="number" min="0"></label>
+            <label class="field-label">Available spaces<input type="number" min="0"></label>
             <label class="field-label">Gender policy *
-              <select name="gender" required>
-                <option value="">Choose a policy</option>
+              <select>
+                <option>Choose a policy</option>
                 <option>Female only</option>
                 <option>Male only</option>
                 <option>Co-ed</option>
               </select>
             </label>
             <label class="field-label">Bathroom arrangement *
-              <select name="bathroom" required>
-                <option value="">Choose an arrangement</option>
+              <select>
+                <option>Choose an arrangement</option>
                 <option>Private</option>
                 <option>Shared</option>
               </select>
@@ -205,19 +205,19 @@
           </div>
           <div class="field-grid">
             <div class="span-all amenity-checks">
-              <label class="check-line"><input type="checkbox" name="amenity" value="Wi-Fi"> Wi-Fi</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Air conditioning"> Air conditioning</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Laundry area"> Laundry area</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Kitchen"> Kitchen</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Study area"> Study area</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Bike parking"> Bike parking</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Private bathroom"> Private bathroom</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Shared bathroom"> Shared bathroom</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Water included"> Water included</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Lockers"> Lockers</label>
-              <label class="check-line"><input type="checkbox" name="amenity" value="Covered drying area"> Covered drying area</label>
+              <label class="check-line"><input type="checkbox"> Wi-Fi</label>
+              <label class="check-line"><input type="checkbox"> Air conditioning</label>
+              <label class="check-line"><input type="checkbox"> Laundry area</label>
+              <label class="check-line"><input type="checkbox"> Kitchen</label>
+              <label class="check-line"><input type="checkbox"> Study area</label>
+              <label class="check-line"><input type="checkbox"> Bike parking</label>
+              <label class="check-line"><input type="checkbox"> Private bathroom</label>
+              <label class="check-line"><input type="checkbox"> Shared bathroom</label>
+              <label class="check-line"><input type="checkbox"> Water included</label>
+              <label class="check-line"><input type="checkbox"> Lockers</label>
+              <label class="check-line"><input type="checkbox"> Covered drying area</label>
             </div>
-            <label class="span-all field-label">Other facilities<input name="facilities" placeholder="For example, a water dispenser or a covered patio"></label>
+            <label class="span-all field-label">Other facilities<input placeholder="For example, a water dispenser or a covered patio"></label>
           </div>
         </section>
         <section class="form-section">
@@ -226,19 +226,19 @@
             <p class="meta">Set expectations for shared spaces, visitors, pets, and quiet hours.</p>
           </div>
           <div class="field-grid">
-            <label class="field-label">Curfew *<input name="curfew" required placeholder="Enter a time or specify if there is none"></label>
-            <label class="field-label">Visitor policy *<input name="visitors" required></label>
-            <label class="field-label">Cooking policy *<input name="cooking" required></label>
-            <label class="field-label">Laundry rules *<input name="laundry" required></label>
+            <label class="field-label">Curfew *<input placeholder="Enter a time or specify if there is none"></label>
+            <label class="field-label">Visitor policy *<input></label>
+            <label class="field-label">Cooking policy *<input></label>
+            <label class="field-label">Laundry rules *<input></label>
             <label class="field-label">Pet policy *
-              <select name="pets" required>
-                <option value="">Choose a policy</option>
+              <select>
+                <option>Choose a policy</option>
                 <option>Allowed</option>
                 <option>With approval</option>
                 <option>Not allowed</option>
               </select>
             </label>
-            <label class="field-label">Other restrictions<input name="restrictions"></label>
+            <label class="field-label">Other restrictions<input></label>
           </div>
         </section>
         <section class="form-section">
@@ -247,16 +247,13 @@
             <p class="meta">Show the room and shared spaces with clear, well-lit images.</p>
           </div>
           <div class="field-grid">
-            <div class="span-all">
-              <div class="photo-box">
-                <div>
-                  <strong>Add photos of your property</strong>
-                  <p class="meta">JPG, PNG, or WebP images. You can choose more than one.</p>
-                </div>
-                <input class="photo-input" id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
-                <label class="btn btn-soft" for="photo-input">Browse files</label>
+            <div class="span-all photo-box">
+              <div>
+                <strong>Add photos of your property</strong>
+                <p class="meta">JPG, PNG, or WebP images. You can choose more than one.</p>
               </div>
-              <div class="upload-gallery" id="upload-gallery"></div>
+              <input class="photo-input" id="photo-input" type="file" accept="image/jpeg,image/png,image/webp" multiple>
+              <label class="btn btn-soft" for="photo-input">Browse files</label>
             </div>
           </div>
         </section>
@@ -269,19 +266,18 @@
             <div class="span-all review-box">
               <div>
                 <h3>Your property</h3>
-                <p id="preview-name"></p>
-                <p class="meta" id="preview-address"></p>
+                <p>Property name</p>
+                <p class="meta">Complete address</p>
               </div>
               <div class="preview-cost">
-                <p class="rent-amount" id="preview-rent"></p>
-                <p id="preview-total"></p>
+                <p class="rent-amount">₱0</p>
+                <p>Move-in: ₱0</p>
                 <p class="meta">First month + advance + deposit</p>
               </div>
             </div>
-            <label class="span-all check-line"><input name="confirmed" type="checkbox" required> I confirm that these details are accurate and I have permission to use the photos. *</label>
+            <label class="span-all check-line"><input type="checkbox"> I confirm that these details are accurate and I have permission to use the photos. *</label>
             <div class="span-all form-actions">
-              <p class="form-status" id="property-status" role="status"></p>
-              <button class="btn btn-red" type="submit">Submit Property</button>
+              <button class="btn btn-red" type="button">Submit Property</button>
             </div>
           </div>
         </section>

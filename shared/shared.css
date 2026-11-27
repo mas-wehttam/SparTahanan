@@ -199,24 +199,6 @@ button, input, select, textarea {
   object-position: center 43%;
 }
 
-/* Saved count but hidden */
-.saved-count {
-  display: none;
-  min-width: 22px;
-  margin-left: 4px;
-  padding: 3px 6px;
-  border-radius: 999px;
-  background: var(--off-white);
-  color: var(--charcoal);
-  font-size: 12px;
-  line-height: 1;
-  text-align: center;
-}
-
-.saved-count.show {
-  display: inline-block;
-}
-
 
 /* PAGE INTRO */
 
@@ -307,12 +289,6 @@ textarea {
   width: 15px;
   height: 15px;
   accent-color: var(--red);
-}
-
-/* Message na lalabas after i-click ang button */
-.form-status {
-  font-weight: 500;
-  color: var(--red);
 }
 
 

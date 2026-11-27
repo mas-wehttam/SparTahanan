@@ -61,20 +61,6 @@
   display: none;
 }
 
-/* 5 photo row */
-.upload-gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0 12px;
-}
-
-.upload-photo {
-  width: 100%;
-  margin-top: 12px;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
 
 /* REVIEW */
 
@@ -87,7 +73,6 @@
   padding: 18px;
   border: 1px solid var(--line);
   background: var(--off-white);
-  overflow-wrap: anywhere;
 }
 
 .review-box h3 {
@@ -101,6 +86,4 @@
 .form-actions {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  gap: 16px;
 }
